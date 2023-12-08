@@ -1,0 +1,5 @@
+# Deterministic Algorithm
+In [[Computer Science]], a **deterministic algorithm** is an [[Algorithm|algorithm]] that, given a particular input, will always produce the same output, with the underlying machine always passing through the same sequence of states.
+
+## Formal definition
+Deterministic algorithms can be defined in terms of a state machine: a _state_ describes what a machine is doing at a particular instant in time. State machines pass in a discrete manner from one state to another. Just after we enter the input, the machine is in its _initial state_ or _start state_. If the machine is deterministic, this means that from this point onwards, its current state determines what its next state will be; its course through the set of states is predetermined. Note that a machine can be deterministic and still never stop or finish, and therefore fail to deliver a result.

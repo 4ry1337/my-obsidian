@@ -1,0 +1,121 @@
+{
+  "main": {
+    "id": "7f35fe55506ba654",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd977e47ca7012a2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Functions.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bd2746c4fe43c56e",
+    "type": "split",
+    "children": [
+      {
+        "id": "89a528e567a0ff07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "232f9864f62ab0a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4489892ffe9b4310",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 305.5
+  },
+  "right": {
+    "id": "629de03bbb243522",
+    "type": "split",
+    "children": [
+      {
+        "id": "03a8804b3536b27e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad2b186c484fe49f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Functions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "52ea5cb730e4ef82",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Functions.md"
+              }
+            }
+          },
+          {
+            "id": "abd999f38a217f63",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 252.5
+  },
+  "active": "fd977e47ca7012a2",
+  "lastOpenFiles": [
+    "Computing/Sub-disciplines/Database Management Systems/SQL/Structured Query Language.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DCL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Operators.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Expressions.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Functions.md",
+    "Computing/Sub-disciplines/Computer Science/Computer Science.md",
+    "Computing/Sub-disciplines/Computer Science/Data.md"
+  ]
+}

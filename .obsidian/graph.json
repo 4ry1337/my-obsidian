@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:_Notes",
+      "color": {
+        "a": 1,
+        "rgb": 4085953
+      }
+    },
+    {
+      "query": "path:\"Knowledge/Computing/Sub-disciplines/Computer Science\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:\"Knowledge/Computing/Sub-disciplines/Database Management Systems\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701159
+      }
+    },
+    {
+      "query": "path:\"Knowledge/Computing/Sub-disciplines/Software Engineering\"",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:Knowledge/Computing/Computer",
+      "color": {
+        "a": 1,
+        "rgb": 14708306
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.04427083333333,
+  "lineSizeMultiplier": 2.80520833333333,
+  "collapse-forces": false,
+  "centerStrength": 0.520833333333333,
+  "repelStrength": 14.6875,
+  "linkStrength": 1,
+  "linkDistance": 244,
+  "scale": 0.16061207422635898,
+  "close": false
+}

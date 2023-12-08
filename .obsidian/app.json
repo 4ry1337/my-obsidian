@@ -1,0 +1,24 @@
+{
+  "promptDelete": false,
+  "spellcheck": true,
+  "tabSize": 4,
+  "spellcheckDictionary": [
+    "subarray"
+  ],
+  "defaultViewMode": "preview",
+  "legacyEditor": false,
+  "livePreview": false,
+  "alwaysUpdateLinks": true,
+  "foldHeading": true,
+  "showLineNumber": false,
+  "showInlineTitle": false,
+  "vimMode": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "1",
+    "downscalePercent": 100
+  },
+  "attachmentFolderPath": "Knowledge/Computing/Sub-disciplines/Software Engineering"
+}

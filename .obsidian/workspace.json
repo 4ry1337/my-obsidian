@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "7f35fe55506ba654",
+    "type": "split",
+    "children": [
+      {
+        "id": "83863414da1775ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc628aeee6847edd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Political Science/PS Practice 2.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bd2746c4fe43c56e",
+    "type": "split",
+    "children": [
+      {
+        "id": "89a528e567a0ff07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "232f9864f62ab0a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4489892ffe9b4310",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5f91807f0d1dda14",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 425.5
+  },
+  "right": {
+    "id": "629de03bbb243522",
+    "type": "split",
+    "children": [
+      {
+        "id": "03a8804b3536b27e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad2b186c484fe49f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Political Science/PS Practice 2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "52ea5cb730e4ef82",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Political Science/PS Practice 2.md"
+              }
+            }
+          },
+          {
+            "id": "abd999f38a217f63",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 252.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "fc628aeee6847edd",
+  "lastOpenFiles": [
+    "Political Science/PS Practice 1.md",
+    "Projects/roky/_Roky.Rocks.md",
+    "New Text Document.txt",
+    "New folder",
+    "Knowledge/React/react packages.md",
+    "Knowledge/Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
+    "Projects/roky/Tints.md",
+    "_Notes/_Tasks.md",
+    "Projects/Untitled.md",
+    "Projects/roky",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/SQL/SQL Clauses.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Graph Database.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Document-Oriented Database.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Column-Oriented Database.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/DBMS types/Relational Database Management System.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database types/Codd's 12 rules.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Object Oriented Model.md",
+    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Network Model.md",
+    "Knowledge/Computing/Sub-disciplines/Computer Science/Algorithm/Algorithms/Held–Karp Algorithm.md",
+    "Projects/CRMD.md",
+    "Projects/APC 16.md",
+    "Projects/_Pet WEB Project.md",
+    "Projects/NMD.md",
+    "Projects/Portfolio.md",
+    "Projects/Privacy Policy.md",
+    "Projects/Untitled Diagram.svg",
+    "Web Structure.png",
+    "Untitled.canvas",
+    "Knowledge/React",
+    "Knowledge/System Design",
+    "Knowledge/Design",
+    "Outdated",
+    "Projects",
+    "_Notes/Untitled Diagram.svg",
+    "Knowledge/Computing/Sub-disciplines/Software Engineering/Software Development/Software Testing",
+    "Knowledge/Computing/Sub-disciplines/Software Engineering/Software Development"
+  ]
+}

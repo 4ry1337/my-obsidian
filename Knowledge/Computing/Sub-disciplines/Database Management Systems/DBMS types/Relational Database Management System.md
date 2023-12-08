@@ -1,0 +1,2 @@
+# Relational Database Management System
+A *relational database management system* is a [[Database Management System]] (DBMS) based on the [[Relational Model]]. Most databases in widespread use today are based on this model.
