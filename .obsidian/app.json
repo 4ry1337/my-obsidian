@@ -11,7 +11,7 @@
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "showLineNumber": false,
-  "showInlineTitle": false,
+  "showInlineTitle": true,
   "vimMode": false,
   "pdfExportSettings": {
     "includeName": true,
@@ -20,5 +20,6 @@
     "margin": "1",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "Knowledge/Computing/Sub-disciplines/Software Engineering"
+  "attachmentFolderPath": "./",
+  "newFileLocation": "current"
 }

@@ -1,7 +1,4 @@
 [
-  "table-editor-obsidian",
-  "obsidian-style-settings",
-  "theme-picker",
-  "obsidian-plantuml",
-  "drawio-obsidian"
+  "obsidian-git",
+  "mermaid-tools"
 ]

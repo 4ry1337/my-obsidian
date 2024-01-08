@@ -1,0 +1,33 @@
+# Online Publishing Platform
+#capstone
+[[Research]]
+
+## Tasks
+- [ ] intro
+
+# Definitions
+SaaS - Software as a Service
+
+
+## Must Have
+- [ ] User Friendly Article editing
+- [ ] Markdown file format
+- [ ] Object storage for various kind of media
+- [ ] Doc Collabs
+- [ ] Publishers
+	- [ ] Subscribtion
+- [ ] Analytics
+- [ ] Content Moderation
+- [ ] Content ownership and copyright policies.
+- [ ] Terms of service and privacy policy.
+- [ ] Community Engagement (Likes, Comments)
+- [ ] URLs, meta tags, and sitemaps
+
+## Ideas 
+- [ ] graph view
+- [ ] Recommendation Algorithms
+- [ ] Plagiarism
+- [ ] kazakh lang
+- [ ] custom themes
+- [ ] mobile (react-native?)
+- [ ] hands free - audio?

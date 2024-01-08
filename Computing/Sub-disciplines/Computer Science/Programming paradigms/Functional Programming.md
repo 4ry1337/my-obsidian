@@ -1,0 +1,2 @@
+# Functional Programming
+In [[Computer Science|computer science]], **functional programming** is a [[Programming Paradigm|programming paradigm]] where programs are constructed by applying and composing functions. It is a [[Declarative Programming|declarative programming]] paradigm in which function definitions are trees of expressions that map values to other values, rather than a sequence of [[Imperative Programming|imperative]] statements which update the running state.

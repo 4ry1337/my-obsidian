@@ -1,11 +1,11 @@
 {
-  "baseFontSize": 21,
+  "baseFontSize": 24,
   "theme": "obsidian",
-  "translucency": false,
-  "cssTheme": "Things",
-  "baseFontSizeAction": true,
+  "translucency": true,
+  "cssTheme": "Catppuccin",
+  "baseFontSizeAction": false,
   "accentColor": "",
   "textFontFamily": "iA Writer Mono S",
-  "interfaceFontFamily": "iA Writer Mono V Regular",
+  "interfaceFontFamily": "iA Writer Duo S,iA Writer Mono V Regular",
   "showViewHeader": true
 }

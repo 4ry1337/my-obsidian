@@ -15,44 +15,51 @@
       }
     },
     {
-      "query": "path:\"Knowledge/Computing/Sub-disciplines/Computer Science\"",
+      "query": "path:\"Computing/Sub-disciplines/Computer Science\"",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "path:\"Knowledge/Computing/Sub-disciplines/Database Management Systems\"",
+      "query": "path:\"Computing/Sub-disciplines/Database Management Systems\"",
       "color": {
         "a": 1,
         "rgb": 14701159
       }
     },
     {
-      "query": "path:\"Knowledge/Computing/Sub-disciplines/Software Engineering\"",
+      "query": "path:\"Computing/Sub-disciplines/Software Engineering\"",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "path:Knowledge/Computing/Computer",
+      "query": "path:Computing/Computer",
       "color": {
         "a": 1,
         "rgb": 14708306
       }
+    },
+    {
+      "query": "path:Rust  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.04427083333333,
   "lineSizeMultiplier": 2.80520833333333,
-  "collapse-forces": false,
-  "centerStrength": 0.520833333333333,
+  "collapse-forces": true,
+  "centerStrength": 0.491683991683992,
   "repelStrength": 14.6875,
   "linkStrength": 1,
   "linkDistance": 244,
-  "scale": 0.16061207422635898,
-  "close": false
+  "scale": 0.1317166198043849,
+  "close": true
 }

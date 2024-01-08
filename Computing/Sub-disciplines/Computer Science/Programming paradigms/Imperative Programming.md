@@ -1,0 +1,2 @@
+# Imperative Programming
+In [[Computer Science|computer science]], **imperative programming** is a [[Programming Paradigm|programming paradigm]] of [[Computer Software|software]] that uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for a computer to perform. Imperative programming focuses on describing how a program operates step by step, rather than on high-level descriptions of its expected results.

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "83863414da1775ce",
+        "id": "88a34d8ebb9e93d4",
         "type": "tabs",
         "children": [
           {
-            "id": "fc628aeee6847edd",
+            "id": "3fa34299daa78e6c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Political Science/PS Practice 2.md",
+                "file": "Capstone/Diagrams.md",
                 "mode": "preview",
                 "source": true
               }
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.5
+    "width": 285.5
   },
   "right": {
     "id": "629de03bbb243522",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Political Science/PS Practice 2.md",
+                "file": "Capstone/Diagrams.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Political Science/PS Practice 2.md"
+                "file": "Capstone/Diagrams.md"
               }
             }
           },
@@ -114,12 +114,33 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "0b597f4b323ac391",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "ac6743b1653cf36e",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
+    "width": 375.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -130,50 +151,58 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "audio-recorder:Start/stop recording": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fc628aeee6847edd",
+  "active": "3fa34299daa78e6c",
   "lastOpenFiles": [
-    "Political Science/PS Practice 1.md",
-    "Projects/roky/_Roky.Rocks.md",
-    "New Text Document.txt",
-    "New folder",
-    "Knowledge/React/react packages.md",
-    "Knowledge/Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
-    "Projects/roky/Tints.md",
+    "Capstone/Diagrams.md",
+    "Dad.md",
+    "Capstone/Research.md",
+    "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
+    "Capstone/Orta.mind",
+    "Capstone/Capstone Project.md",
+    "Rust/Rust - Ownership.md",
+    "Rust/Pasted image 20231226112435.png",
+    "Rust/Pasted image 20231226112431.png",
+    "Computing/Computer/Computer Programming/Memory Management.md",
+    "Rust/Variables and Mutability.md",
+    "Computing/Computer/Computer Programming/Resource Management.md",
+    "Rust/Rust - Data Types.md",
+    "Rust/Rust - Control Flow.md",
     "_Notes/_Tasks.md",
-    "Projects/Untitled.md",
-    "Projects/roky",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/SQL/SQL Clauses.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Graph Database.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Document-Oriented Database.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/NoSQL/Column-Oriented Database.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/DBMS types/Relational Database Management System.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database types/Codd's 12 rules.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Object Oriented Model.md",
-    "Knowledge/Computing/Sub-disciplines/Database Management Systems/Database Models/Network Model.md",
-    "Knowledge/Computing/Sub-disciplines/Computer Science/Algorithm/Algorithms/Held–Karp Algorithm.md",
-    "Projects/CRMD.md",
-    "Projects/APC 16.md",
-    "Projects/_Pet WEB Project.md",
-    "Projects/NMD.md",
-    "Projects/Portfolio.md",
-    "Projects/Privacy Policy.md",
-    "Projects/Untitled Diagram.svg",
+    "_Notes/_Ideas.md",
+    "Computing/Computer/Computer Software/Operating System/Operating System.md",
+    "Computing/Computer/Computer Software/Computer Software.md",
+    "Computing/Computer/Computer Software/Operating System",
+    "Capstone/Pasted image 20231217194810.png",
+    "Capstone/Pasted image 20231217195136.png",
+    "Capstone/Pasted image 20231217194900.png.md",
+    "Computing/Sub-disciplines/Computer Science/Control Flow.md",
+    "Rust/Rust - Target.md",
+    "Rust/Rust - Functions.md",
+    "Computing/Computer/Computer Programming/Statement.md",
+    "Computing/Computer/Computer Programming/Function.md",
+    "Computing/Computer/Computer Programming/Computer Programming.md",
+    "Computing/Computer/Computer Programming/Parameter.md",
+    "Computing/Sub-disciplines/Computer Science/Programming Languages/Programming Language.md",
+    "Computing/Sub-disciplines/Computer Science/Computer Science.md",
+    "Computing/Sub-disciplines/Computer Science/Data.md",
+    "Computing/Sub-disciplines",
+    "Computing/Computer/Computer Hardware",
+    "Computing/Computer",
+    "Computing/Computer/Computer Software",
+    "Knowledge/Computing/Computer/Computer Programming",
+    "Knowledge/Computing/Computer",
+    "Knowledge/Computing",
+    "Knowledge",
+    "Computing/Sub-disciplines/Computer Science/Programming paradigms/Pasted image 20231219155630.png",
+    "Capstone/Pasted image 20231217224549.png",
+    "Capstone/Pasted image 20231217194900.png",
+    "Japanese/Pasted image 20231114192049.png",
+    "Computing/Software Engineering/Pasted image 20231213081715.png",
+    "Capstone/Capstone Project.canvas",
     "Web Structure.png",
-    "Untitled.canvas",
-    "Knowledge/React",
-    "Knowledge/System Design",
-    "Knowledge/Design",
-    "Outdated",
-    "Projects",
-    "_Notes/Untitled Diagram.svg",
-    "Knowledge/Computing/Sub-disciplines/Software Engineering/Software Development/Software Testing",
-    "Knowledge/Computing/Sub-disciplines/Software Engineering/Software Development"
+    "Untitled.canvas"
   ]
 }

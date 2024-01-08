@@ -1,0 +1,1 @@
+In [[Computer Programming|computer programming]], a **statement** is a syntactic unit of an imperative programming language that expresses some action to be carried out.

@@ -1,0 +1,102 @@
+# Architecture
+```mermaid
+flowchart TB
+	subgraph users
+		a(Admin)
+		cm(Content Manager)
+		u(User)
+	end
+	
+	subgraph client
+		direction TB
+		web(Web App)
+		modile(modile App)
+	end
+	
+	api(API)
+	
+	redis[(Redis Cache)]
+	subgraph databases
+	    neo4j[(Graph Database)]
+	    sql[(Article Database)]
+	end
+    minio[(MINIO Object Storage)]
+    
+    queue{Event Queue}
+    ns(Notification Service)
+    
+    promoetheus(Promoetheus: Gather Metrics)
+    grafana(Grafana: Visualize Metrics)
+    logstash(Logstash: Gather Logs)
+    
+    elsaticsearch("Elsaticsearch for logs, mb later for searching in db")
+    kibana(Kibana: Visualize Logs)
+    
+	users --> client
+	client <--> api
+	api <--> databases
+	api <--> minio
+	api <--> redis
+	api <--> queue
+	queue --> ns
+	api --> logstash
+	logstash --> elsaticsearch
+	elsaticsearch --> kibana
+	api --> promoetheus
+	promoetheus --> grafana
+```
+
+# System Design
+```mermaid  
+flowchart TD
+	client["Client"]
+	lb{Load Balancer}
+    
+	bs(Backend Service)
+    fan-out(Fan-out Services)
+    rs(Recommendation Service)
+    as(Analysitcs Service)
+    ars(Article Service)
+    ac(Article Cache)
+    afs(Article Feed Service)
+    afc(Article Feed Cache)
+    ns(Notification Service)
+    ls(Log Service)
+    ss(Search Service)
+    
+	cs(Collab Service)
+    
+    client --> lb
+    lb --> bs
+    bs --> fan-out
+    fan-out --> as 
+    fan-out --> ls
+    fan-out --> ss
+    fan-out --> rs
+    bs --> ns
+    bs --> ars
+    ars --> ac
+    bs --> afs
+    afs --> afc
+```
+
+# Components
+
+# Models
+```mermaid
+erDiagram
+	User {
+		string Id PK
+	}
+	Article {
+		string Id PK
+	}
+```
+
+# Use Case
+```mermaid
+sequenceDiagram
+Alice ->> John: Hello John, how are you?
+John -->> Alice: Great!
+Alice -) John: See you later!
+```

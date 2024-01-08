@@ -1,0 +1,7 @@
+- DEV
+	- [ ] Portfolio website
+	- [ ] CMS for Creators | Publishing Platform
+	- [ ] 3D data visualization
+	- [ ] Obsidian Site
+	- [ ] Bluetooth widget for Windows
+	- [ ] Web Game
