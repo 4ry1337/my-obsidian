@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Rust/Rust - Ownership.md",
                 "mode": "source",
                 "source": true
               }
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 285.5,
+    "collapsed": true
   },
   "right": {
     "id": "629de03bbb243522",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Rust/Rust - Ownership.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Rust/Rust - Ownership.md"
               }
             }
           },
@@ -154,7 +155,7 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3fa34299daa78e6c",
+  "active": "4489892ffe9b4310",
   "lastOpenFiles": [
     "Capstone/Diagrams.md",
     "Dad.md",
