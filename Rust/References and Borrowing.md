@@ -1,3 +1,4 @@
+# Reference
 A *reference* is a like a pointer in that it's an address we can follow to access the data stored at the address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
 
 > [!info]
@@ -15,3 +16,9 @@ Let’s take a closer look at the function call here:
     // it refers to, it is not dropped.
 ```
 The `&s1` syntax lets us create a reference that *refers* to the value of `s1` but does not own it. Because it does not own it, the value it points to will not be dropped when the reference stops being used.
+
+## Borrowing
+
+The action of creating a reference *borrowing*. Reference as variables are immutable by default. We’re not allowed to modify something we have a reference to.
+
+## Mutable References
