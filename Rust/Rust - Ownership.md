@@ -43,3 +43,7 @@ Passing a variable to a function will move and copy, just as assignment does. If
 ### Return values and Scope
 Returning values can also transfer ownership. The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it.
 
+When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
+
+
+
