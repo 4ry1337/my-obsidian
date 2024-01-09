@@ -22,3 +22,12 @@ The `&s1` syntax lets us create a reference that *refers* to the value of `
 The action of creating a reference *borrowing*. Reference as variables are immutable by default. We’re not allowed to modify something we have a reference to.
 
 ## Mutable References
+We create a mutable reference with `&mut`. Mutable references have one big restriction: if you have a mutable reference to a value, you can have no other references to that value.
+
+ The benefit of having this restriction is that Rust can prevent data races at compile time. A _data race_ is similar to a race condition and happens when these three behaviors occur:
+
+- Two or more pointers access the same data at the same time.
+- At least one of the pointers is being used to write to the data.
+- There’s no mechanism being used to synchronize access to the data.
+
+Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime; Rust prevents this problem by refusing to compile code with data races!
