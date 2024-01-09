@@ -1,0 +1,1 @@
+A *reference* is a like a pointer in that it's an address we can follow to access the data stored at the address.

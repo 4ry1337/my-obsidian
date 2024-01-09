@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Ownership.md",
+                "file": "Rust/References and Borrowing.md",
                 "mode": "source",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Ownership.md",
+                "file": "Rust/References and Borrowing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Ownership.md"
+                "file": "Rust/References and Borrowing.md"
               }
             }
           },
@@ -155,15 +155,16 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "4489892ffe9b4310",
+  "active": "3fa34299daa78e6c",
   "lastOpenFiles": [
+    "Rust/Rust - Ownership.md",
+    "Rust/References and Borrowing.md",
     "Capstone/Diagrams.md",
     "Dad.md",
     "Capstone/Research.md",
     "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
     "Capstone/Orta.mind",
     "Capstone/Capstone Project.md",
-    "Rust/Rust - Ownership.md",
     "Rust/Pasted image 20231226112435.png",
     "Rust/Pasted image 20231226112431.png",
     "Computing/Computer/Computer Programming/Memory Management.md",
@@ -188,7 +189,6 @@
     "Computing/Computer/Computer Programming/Parameter.md",
     "Computing/Sub-disciplines/Computer Science/Programming Languages/Programming Language.md",
     "Computing/Sub-disciplines/Computer Science/Computer Science.md",
-    "Computing/Sub-disciplines/Computer Science/Data.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",

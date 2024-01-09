@@ -45,5 +45,3 @@ Returning values can also transfer ownership. The ownership of a variable follow
 
 When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
 
-
-
