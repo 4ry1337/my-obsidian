@@ -31,3 +31,17 @@ We create a mutable reference with `&mut`. Mutable references have one big rest
 - There’s no mechanism being used to synchronize access to the data.
 
 Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime; Rust prevents this problem by refusing to compile code with data races!
+
+As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not _simultaneous_ ones.
+
+We _also_ cannot have a mutable reference while we have an immutable one to the same value.
+
+```Rust
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    let r3 = &mut s; // BIG PROBLEM
+
+    println!("{}, {}, and {}", r1, r2, r3);
+```
