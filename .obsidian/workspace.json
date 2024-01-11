@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Slice Type.md",
+                "file": "Rust/Rust - Data Types.md",
                 "mode": "source",
                 "source": true
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Rust/Rust - Slice Type.md",
+                "file": "Rust/Rust - Data Types.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Slice Type.md",
+                "file": "Rust/Rust - Data Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Slice Type.md"
+                "file": "Rust/Rust - Data Types.md"
               }
             }
           },
@@ -200,8 +200,8 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Rust/Rust - References and Borrowing.md",
     "Rust/Rust - Slice Type.md",
+    "Rust/Rust - References and Borrowing.md",
     "Computing/Computer/Computer Programming/Dangling Reference.md",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",
