@@ -39,3 +39,5 @@ let slice = &s[..];
 > The type that signifies “string slice” is written as `&str`
 
 ## String Literals as Slices
+
+## String Slices as Parameters

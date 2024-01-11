@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 216
   },
   "right": {
     "id": "629de03bbb243522",
@@ -139,7 +139,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5
+    "width": 375.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,9 +155,10 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Rust/Pasted image 20240111150142.png",
-    "Rust/Rust - Data Types.md",
+    "Rust/Variables and Mutability.md",
     "Rust/Rust - Slice Type.md",
+    "Rust/Rust - Data Types.md",
+    "Rust/Pasted image 20240111150142.png",
     "Rust/Rust - References and Borrowing.md",
     "Computing/Computer/Computer Programming/Dangling Reference.md",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
@@ -173,7 +175,6 @@
     "Capstone/Orta.mind",
     "Capstone/Capstone Project.md",
     "Computing/Computer/Computer Programming/Memory Management.md",
-    "Rust/Variables and Mutability.md",
     "Computing/Computer/Computer Programming/Resource Management.md",
     "_Notes/_Tasks.md",
     "_Notes/_Ideas.md",
@@ -199,7 +200,6 @@
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20231217194900.png",
     "Japanese/Pasted image 20231114192049.png",
-    "Computing/Software Engineering/Pasted image 20231213081715.png",
     "Capstone/Capstone Project.canvas",
     "Untitled.canvas"
   ]
