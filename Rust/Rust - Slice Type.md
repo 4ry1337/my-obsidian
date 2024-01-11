@@ -39,5 +39,12 @@ let slice = &s[..];
 > The type that signifies “string slice” is written as `&str`
 
 ## String Literals as Slices
+Recall that we talked about string literals being stored inside the binary. Now that we know about slices, we can properly understand string literals:
+
+```Rust
+let s = "Hello, world!";
+```
+
+The type of `s` here is `&str`: it’s a slice pointing to that specific point of the binary. This is also why string literals are immutable; `&str` is an immutable reference.
 
 ## String Slices as Parameters
