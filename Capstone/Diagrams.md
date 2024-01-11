@@ -97,6 +97,7 @@ erDiagram
 ```
 
 # Use Case
+## Sequence Diagram
 ```mermaid
 sequenceDiagram
 Alice ->> John: Hello John, how are you?
