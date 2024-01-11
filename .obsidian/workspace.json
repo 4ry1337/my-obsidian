@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Slice Type.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Slice Type.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Slice Type.md"
+                "file": "Rust/Rust - User-defined Types.md"
               }
             }
           },
@@ -155,10 +155,11 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Rust/Rust Programming Language.md",
     "Rust/Rust - Data Types.md",
-    "Rust/Rust - Control Flow.md",
     "Rust/Rust - Slice Type.md",
+    "Rust/Rust - User-defined Types.md",
+    "Rust/Rust Programming Language.md",
+    "Rust/Rust - Control Flow.md",
     "Rust/Variables and Mutability.md",
     "Rust/Pasted image 20240111150142.png",
     "Rust/Rust - References and Borrowing.md",
@@ -188,7 +189,6 @@
     "Computing/Sub-disciplines/Computer Science/Control Flow.md",
     "Rust/Rust - Target.md",
     "Computing/Computer/Computer Programming/Statement.md",
-    "Computing/Computer/Computer Programming/Function.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",
