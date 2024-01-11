@@ -4,20 +4,65 @@
     "type": "split",
     "children": [
       {
-        "id": "88a34d8ebb9e93d4",
+        "id": "c510b6fbf122e9e1",
         "type": "tabs",
+        "dimension": 61.27694859038143,
         "children": [
           {
-            "id": "3fa34299daa78e6c",
+            "id": "b89b700feb6b20f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computing/Computer/Computer Programming/Dangling Reference.md",
-                "mode": "preview",
+                "file": "Rust/Rust - Slice Type.md",
+                "mode": "source",
                 "source": true
               }
-            }
+            },
+            "group": "dc415634e85557aa"
+          }
+        ]
+      },
+      {
+        "id": "a3830d7d909d5129",
+        "type": "tabs",
+        "dimension": 38.72305140961858,
+        "children": [
+          {
+            "id": "aa744a48817c3e9e",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Rust/Rust - Slice Type.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              }
+            },
+            "group": "dc415634e85557aa"
           }
         ]
       }
@@ -86,14 +131,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computing/Computer/Computer Programming/Dangling Reference.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": false
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -103,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computing/Computer/Computer Programming/Dangling Reference.md"
+                "file": "Rust/Rust - Slice Type.md"
               }
             }
           },
@@ -135,8 +180,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -154,13 +198,14 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3fa34299daa78e6c",
+  "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Rust/Rust - References and Borrowing.md",
+    "Rust/Rust - Slice Type.md",
+    "Computing/Computer/Computer Programming/Dangling Reference.md",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",
     "Rust/Pasted image 20231226112431.png",
-    "Computing/Computer/Computer Programming/Dangling Reference.md",
-    "Rust/References and Borrowing.md",
     "Rust/Rust - Functions.md",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Control Flow.md",

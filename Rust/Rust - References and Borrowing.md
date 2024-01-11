@@ -1,10 +1,10 @@
 # Reference
-A *reference* is a like a pointer in that it's an address we can follow to access the data stored at the address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
+A *reference* is a like a [[Pointer|pointer]] in that it's an address we can follow to access the data stored at the address; that data is [[Rust - Ownership|owned]] by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
 
 > [!info]
 > The opposite of referencing by using `&` is *dereferencing*, which is accomplished with the dereference operator, `*`.
 
-Let’s take a closer look at the function call here:
+Let’s take a closer look at the [[Rust - Functions|function]] call here:
 ```Rust
     let s1 = String::from("hello");
     let len = calculate_length(&s1);
@@ -24,7 +24,7 @@ The action of creating a reference *borrowing*. Reference as variables are immu
 ## Mutable References
 We create a mutable reference with `&mut`. Mutable references have one big restriction: if you have a mutable reference to a value, you can have no other references to that value.
 
- The benefit of having this restriction is that Rust can prevent data races at compile time. A _data race_ is similar to a race condition and happens when these three behaviors occur:
+ The benefit of having this restriction is that [[Rust Programming Language|Rust]] can prevent data races at compile time. A _data race_ is similar to a race condition and happens when these three behaviors occur:
 
 - Two or more pointers access the same data at the same time.
 - At least one of the pointers is being used to write to the data.
@@ -50,4 +50,8 @@ Users of an immutable reference don’t expect the value to suddenly change out 
 
 ## Dangling References
 
-In Rust, the compiler guarantees that references will never be dangling references: if you have a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.
+In Rust, the compiler guarantees that references will never be [[Dangling Reference|dangling references]]: if you have a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.
+
+# The Rules of References
+- At any given time, you can have *either* one mutable reference *or* any number of immutable references.
+- References must always be valid.
