@@ -2,7 +2,7 @@
 In [[Rust Programming Language|rust]], *Slice* - a dynamically-sized view into a contiguous sequence.
 
 ## String Slices
-A *string slice* is a reference to part of a `String`, and it looks like this:
+A *string slice* is a [[Rust - References and Borrowing|reference]] to part of a `String`, and it looks like this:
 ```Rust
 let s = String::from("hello world");
 let hello = &s[0..5];
@@ -34,3 +34,8 @@ let len = s.len();
 let slice = &s[0..len];
 let slice = &s[..];
 ```
+
+> [!info]
+> The type that signifies “string slice” is written as `&str`
+
+## String Literals as Slices

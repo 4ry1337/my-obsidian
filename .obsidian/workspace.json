@@ -6,7 +6,6 @@
       {
         "id": "c510b6fbf122e9e1",
         "type": "tabs",
-        "dimension": 61.27694859038143,
         "children": [
           {
             "id": "b89b700feb6b20f0",
@@ -18,51 +17,7 @@
                 "mode": "source",
                 "source": true
               }
-            },
-            "group": "dc415634e85557aa"
-          }
-        ]
-      },
-      {
-        "id": "a3830d7d909d5129",
-        "type": "tabs",
-        "dimension": 38.72305140961858,
-        "children": [
-          {
-            "id": "aa744a48817c3e9e",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Rust/Rust - Slice Type.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
-                  "close": false
-                }
-              }
-            },
-            "group": "dc415634e85557aa"
+            }
           }
         ]
       }
@@ -184,8 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5,
-    "collapsed": true
+    "width": 375.5
   },
   "left-ribbon": {
     "hiddenItems": {
