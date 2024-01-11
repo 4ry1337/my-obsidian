@@ -56,3 +56,9 @@ If we have a string slice, we can pass that directly. If we have a `String`, we
 Defining a function to take a string slice instead of a reference to a `String` makes our API more general and useful without losing any functionality.
 
 ## Other Slices
+
+```Rust
+let a = [1, 2, 3, 4, 5];
+
+let slice = &a[1..3];
+```
