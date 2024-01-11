@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Data Types.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "mode": "source",
                 "source": true
               }
@@ -34,7 +34,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Rust/Rust - Data Types.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Data Types.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Data Types.md"
+                "file": "Rust/Rust - Slice Type.md"
               }
             }
           },
@@ -200,6 +200,7 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Rust/Rust - Data Types.md",
     "Rust/Rust - Slice Type.md",
     "Rust/Rust - References and Borrowing.md",
     "Computing/Computer/Computer Programming/Dangling Reference.md",
@@ -207,7 +208,6 @@
     "Rust/Pasted image 20231226112435.png",
     "Rust/Pasted image 20231226112431.png",
     "Rust/Rust - Functions.md",
-    "Rust/Rust - Data Types.md",
     "Rust/Rust - Control Flow.md",
     "Rust/Rust - Cargo.md",
     "Rust/Rust - Ownership.md",

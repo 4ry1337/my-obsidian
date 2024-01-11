@@ -1,2 +1,5 @@
 # Slice
-*Slice* - a dynamically-sized view into a contiguous sequence.
+In [[Rust Programming Language|Rust]], *Slice* - a dynamically-sized view into a contiguous sequence.
+
+
+
