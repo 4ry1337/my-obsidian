@@ -45,3 +45,9 @@ We _also_ cannot have a mutable reference while we have an immutable one to th
 
     println!("{}, {}, and {}", r1, r2, r3);
 ```
+
+Users of an immutable reference don’t expect the value to suddenly change out from under them! However, multiple immutable references are allowed because no one who is just reading the data has the ability to affect anyone else’s reading of the data.
+
+## Dangling References
+
+In Rust, the compiler guarantees that references will never be dangling references: if you have a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.

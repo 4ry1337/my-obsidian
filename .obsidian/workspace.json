@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/References and Borrowing.md",
+                "file": "Computing/Computer/Computer Programming/Dangling Reference.md",
                 "mode": "source",
                 "source": true
               }
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5,
-    "collapsed": true
+    "width": 285.5
   },
   "right": {
     "id": "629de03bbb243522",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/References and Borrowing.md",
+                "file": "Computing/Computer/Computer Programming/Dangling Reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/References and Borrowing.md"
+                "file": "Computing/Computer/Computer Programming/Dangling Reference.md"
               }
             }
           },
@@ -157,11 +156,12 @@
   },
   "active": "3fa34299daa78e6c",
   "lastOpenFiles": [
+    "Rust/References and Borrowing.md",
+    "Computing/Computer/Computer Programming/Dangling Reference.md",
     "Rust/Rust - Functions.md",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Control Flow.md",
     "Rust/Rust - Cargo.md",
-    "Rust/References and Borrowing.md",
     "Rust/Rust - Ownership.md",
     "Capstone/Diagrams.md",
     "Dad.md",
@@ -188,7 +188,6 @@
     "Computing/Computer/Computer Programming/Function.md",
     "Computing/Computer/Computer Programming/Computer Programming.md",
     "Computing/Computer/Computer Programming/Parameter.md",
-    "Computing/Sub-disciplines/Computer Science/Programming Languages/Programming Language.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",
