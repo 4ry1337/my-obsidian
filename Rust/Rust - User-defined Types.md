@@ -5,3 +5,4 @@ Both structs and enums can contain fields with different types. Alternative n
 
 The `impl` keyword can define methods for a user-defined type (data and functions are defined separately). Implementations fulfill a role similar to that of classes within other languages.
 
+## Struct
