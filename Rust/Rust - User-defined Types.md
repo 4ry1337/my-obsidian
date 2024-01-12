@@ -126,4 +126,15 @@ fn main() {
 ```
 
 ### Unit-Like Structs Without Any Fields
-*Unit-like structs* don’t have any fields, similar to [[`()`|Rust - Data Types#The Tuple Type]]
+*Unit-like structs* don’t have any fields, similar to [[Rust - Data Types#The Tuple Type|`()`]].
+
+```Rust
+struct AlwaysEqual;
+fn main() {
+	let subject = AlwaysEqual;
+}
+```
+### Ownership of Struct Data
+In the `User` struct definition, we used the owned `String` type rather than the `&str` string slice type. This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
+
+It’s also possible for structs to store references to data owned by something else, but to do so requires the use of [[Rust - Lifetimes|_lifetimes_]]
