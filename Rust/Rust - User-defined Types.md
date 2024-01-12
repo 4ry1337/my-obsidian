@@ -139,3 +139,10 @@ fn main() {
 In the `User` struct definition, we used the owned `String` type rather than the `&str` string slice type. This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
 
 It’s also possible for structs to store references to data owned by something else, but to do so requires the use of [[Rust - Lifetimes|_lifetimes_]].
+
+## Method Syntax
+*Methods* are similar to [[Rust - Functions|functions]]: we declare them with the `fn` keyword and a name, they can have parameters and a return value, and they contain some code that’s run when the method is called from somewhere else.
+
+Unlike functions, methods are defined within the context of a struct (or an [[enum]] or a [[trait]] object, respectively), and their first parameter is always `self`, which represents the instance of the struct the method is being called on.
+
+### Defining Methods
