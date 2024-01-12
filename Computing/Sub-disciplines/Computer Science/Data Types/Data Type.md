@@ -16,7 +16,7 @@ Primitive Data Types are a set of basic data types from which all other data typ
 or **compound data type** is data type which can be constructed in a program using the [[Programming Language|programming language]]'s primitive data types and other composite types. It is sometimes called a **structure** or **aggregate data type**, although the latter term may also refer to arrays, lists, etc.
 
 - **Array.**
-- **Record** also know as structure.
+- **[[Record]]** also know as structure.
 - **Union.**
 
 ### Abstract Data Types

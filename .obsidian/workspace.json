@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md"
+                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md"
               }
             }
           },
@@ -155,6 +155,9 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
+    "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
+    "Computing/Sub-disciplines/Computer Science/Data Types",
     "Rust/Rust - User-defined Types.md",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Ownership.md",
@@ -187,8 +190,6 @@
     "Capstone/Pasted image 20231217195136.png",
     "Capstone/Pasted image 20231217194900.png.md",
     "Computing/Sub-disciplines/Computer Science/Control Flow.md",
-    "Rust/Rust - Target.md",
-    "Computing/Computer/Computer Programming/Statement.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",
@@ -196,7 +197,6 @@
     "Knowledge/Computing/Computer/Computer Programming",
     "Knowledge/Computing/Computer",
     "Knowledge/Computing",
-    "Knowledge",
     "Computing/Sub-disciplines/Computer Science/Programming paradigms/Pasted image 20231219155630.png",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20231217194900.png",
