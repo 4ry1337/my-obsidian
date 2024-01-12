@@ -104,5 +104,26 @@ fn main() {
 > [!info]
 > Note that the struct update syntax uses `=` like an assignment; this is because it moves the data.
 
+See [[Rust - Ownership#Variables and Data Interacting with Move]]
+
 In this example, we can no longer use `user1` as a whole after creating `user2` because the `String` in the `username` field of `user1` was moved into `user2`.
 
+See [[Rust - Ownership#Stack-Only Data Copy]]
+
+### Using Tuple Structs Without Named Fields to Create Different Types
+
+[[Rust Programming Language|Rust]] also supports structs that look similar to tuples, called *tuple structs*.
+
+Tuple structs have the added meaning the struct name provides but don’t have names associated with their fields; rather, they just have the types of the fields.
+
+```Rust
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+fn main() {
+	let black = Color(0, 0, 0);
+	let origin = Point(0, 0, 0);
+}
+```
+
+### Unit-Like Structs Without Any Fields
+*Unit-like structs* don’t have any fields, similar to [[`()`|Rust - Data Types#The Tuple Type]]

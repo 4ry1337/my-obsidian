@@ -35,6 +35,18 @@ If we _do_ want to deeply copy the heap data of the `String`, not just the st
     println!("s1 = {}, s2 = {}", s1, s2);
 ```
 #### Stack-Only Data: Copy
+There’s another wrinkle we haven’t talked about yet. 
+
+```Rust
+let x = 5;
+let y = x;
+println!("x = {}, y = {}", x, y);
+```
+
+But this code seems to contradict what we just learned: we don’t have a call to `clone`, but `x` is still valid and wasn’t moved into `y`.
+
+The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent `x` from being valid after we create the variable `y`.
+
 There’s no difference between [[deep]] and [[shallow copying]] here, so calling `clone` wouldn’t do anything different from the usual shallow copying, and we can leave it out.
 
 ## Ownership and Functions
