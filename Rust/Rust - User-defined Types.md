@@ -181,3 +181,25 @@ If we wanted to change the instance that we’ve called the method on as part of
 
 Having a method that takes ownership of the instance by using just `self` as the first parameter is rare; this technique is usually used when the method transforms `self` into something else and you want to prevent the caller from using the original instance after the transformation.
 
+Note that we can choose to give a method the same name as one of the struct’s fields.
+
+```Rust
+impl Rectangle {
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
+}
+```
+
+### Methods with More Parameters
