@@ -213,3 +213,6 @@ impl Rectangle {
 	}
 }
 ```
+### Associated Functions
+All functions defined within an `impl` block are called *associated functions* because they’re associated with the type named after the `impl`.
+
