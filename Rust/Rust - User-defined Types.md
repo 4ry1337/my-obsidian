@@ -216,3 +216,7 @@ impl Rectangle {
 ### Associated Functions
 All functions defined within an `impl` block are called *associated functions* because they’re associated with the type named after the `impl`.
 
+We can define associated functions that don’t have `self` as their first parameter (and thus are not methods) because they don’t need an instance of the type to work with.
+
+### Multiple `impl` Blocks
+Each struct is allowed to have multiple `impl` blocks.
