@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computing/Sub-disciplines/Computer Science/Data Types/Record.md"
+                "file": "Rust/Rust - User-defined Types.md"
               }
             }
           },
@@ -155,8 +155,8 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
+    "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
     "Computing/Sub-disciplines/Computer Science/Data Types",
     "Rust/Rust - User-defined Types.md",
     "Rust/Rust - Data Types.md",

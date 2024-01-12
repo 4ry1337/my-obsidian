@@ -4,4 +4,4 @@ A record is a collection of _fields_, possibly of different [[Data Type|data ty
 
 A _record type_ is a [[Data Type|data type]] that describes such values and variables.
 
-//Most modern computer languages allow the programmer to define new record types. The definition includes specifying the data type of each field and an identifier by which it can be accessed.
+Most modern computer languages allow the programmer to define new record types. The definition includes specifying the data type of each field and an identifier by which it can be accessed.
