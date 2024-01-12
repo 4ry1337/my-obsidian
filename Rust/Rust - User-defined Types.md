@@ -175,3 +175,9 @@ In the signature for `area`, we use `&self` instead of `rectangle: &Rectangl
 > [!info]
 > Methods must have a parameter named `self` of type `Self` for their first parameter, so Rust lets you abbreviate this with only the name `self` in the first parameter spot.
 
+We chose `&self` in the function version, because we don’t want to take ownership, and we just want to read the data in the struct, not write to it.
+
+If we wanted to change the instance that we’ve called the method on as part of what the method does, we’d use `&mut self` as the first parameter.
+
+Having a method that takes ownership of the instance by using just `self` as the first parameter is rare; this technique is usually used when the method transforms `self` into something else and you want to prevent the caller from using the original instance after the transformation.
+
