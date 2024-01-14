@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Capstone/Diagrams.md",
                 "mode": "source",
                 "source": true
               }
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 427
+    "width": 297
   },
   "right": {
     "id": "629de03bbb243522",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Capstone/Diagrams.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md"
+                "file": "Capstone/Diagrams.md"
               }
             }
           },
@@ -155,13 +155,14 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Capstone Project.md",
+    "Capstone/Diagrams.md",
+    "Rust/Rust - User-defined Types.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
     "Computing/Sub-disciplines/Computer Science/Data Types",
-    "Rust/Rust - User-defined Types.md",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Ownership.md",
-    "Capstone/Diagrams.md",
     "Rust/Rust - Slice Type.md",
     "Rust/Rust Programming Language.md",
     "Rust/Rust - Control Flow.md",
@@ -178,7 +179,6 @@
     "Capstone/Research.md",
     "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
     "Capstone/Orta.mind",
-    "Capstone/Capstone Project.md",
     "Computing/Computer/Computer Programming/Memory Management.md",
     "Computing/Computer/Computer Programming/Resource Management.md",
     "_Notes/_Tasks.md",

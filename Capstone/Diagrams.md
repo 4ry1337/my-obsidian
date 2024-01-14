@@ -88,9 +88,14 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-	User {
+	Account {
+		string Id PK
+		string Profile FK
+	}
+	Profile {
 		string Id PK
 	}
+	Account  Profile
 	Article {
 		string Id PK
 	}

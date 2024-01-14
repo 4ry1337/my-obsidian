@@ -1,13 +1,18 @@
-# Online Publishing Platform
+# Orta
 #capstone
 [[Research]]
 
 ## Tasks
-- [ ] intro
+- [x] intro
 
-# Definitions
-SaaS - Software as a Service
+# Online publishing platform
 
+## Tech Stack
+- Next.js as frontend
+- Rust as backend
+- neo4j for user db
+- postgresql for article db
+- redis - cache + rate limiter
 
 ## Must Have
 - [ ] User Friendly Article editing
