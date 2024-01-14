@@ -91,14 +91,24 @@ erDiagram
 	Account {
 		string Id PK
 		string Profile FK
+		string[] Articles FK
+		
 	}
 	Profile {
 		string Id PK
+		string settings
 	}
-	Account  Profile
 	Article {
 		string Id PK
+		string[] tags FK
 	}
+	Tag {
+		string Id PK
+		label string "unique"
+	}
+	Account ||--|| Profile : contains
+	Account ||--o{ Article : contains
+	Article }o--o{ Tag : contains
 ```
 
 # Use Case
