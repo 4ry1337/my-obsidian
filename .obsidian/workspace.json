@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Research.md",
-                "mode": "preview",
+                "file": "Capstone/Diagrams.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Research.md",
+                "file": "Capstone/Diagrams.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Research.md"
+                "file": "Capstone/Diagrams.md"
               }
             }
           },
@@ -155,6 +155,7 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Research.md",
     "Dad.md",
     "Capstone/Diagrams.md",
     "Capstone/Capstone Project.md",
@@ -176,7 +177,6 @@
     "Rust/Pasted image 20231226112431.png",
     "Rust/Rust - Functions.md",
     "Rust/Rust - Cargo.md",
-    "Capstone/Research.md",
     "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
     "Capstone/Orta.mind",
     "Computing/Computer/Computer Programming/Memory Management.md",
