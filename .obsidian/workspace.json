@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dad.md",
+                "file": "Capstone/Research.md",
                 "mode": "preview",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dad.md",
+                "file": "Capstone/Research.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dad.md"
+                "file": "Capstone/Research.md"
               }
             }
           },
@@ -155,6 +155,7 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Dad.md",
     "Capstone/Diagrams.md",
     "Capstone/Capstone Project.md",
     "Rust/Rust - User-defined Types.md",
@@ -175,7 +176,6 @@
     "Rust/Pasted image 20231226112431.png",
     "Rust/Rust - Functions.md",
     "Rust/Rust - Cargo.md",
-    "Dad.md",
     "Capstone/Research.md",
     "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
     "Capstone/Orta.mind",
