@@ -92,15 +92,19 @@ erDiagram
 		string Id PK
 		string Profile FK
 		string[] Articles FK
-		
 	}
 	Profile {
 		string Id PK
 		string settings
+		string[] history FK
+		string[] readinglist FK
+	}
+	ProfileHistory {
 	}
 	Article {
 		string Id PK
 		string[] tags FK
+		views int
 	}
 	Tag {
 		string Id PK

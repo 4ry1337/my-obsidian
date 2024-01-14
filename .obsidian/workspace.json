@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Diagrams.md",
-                "mode": "source",
+                "file": "Dad.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Dad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Dad.md"
               }
             }
           },
@@ -155,8 +155,8 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Capstone/Capstone Project.md",
     "Capstone/Diagrams.md",
+    "Capstone/Capstone Project.md",
     "Rust/Rust - User-defined Types.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
