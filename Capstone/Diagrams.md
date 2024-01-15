@@ -13,6 +13,7 @@ subgraph Article Interactions
 	ca(Comment Article)
 	sa(Share Article)
 	sa(Share Article)
+end
 fu(Follow User)
 ep(Edit Profile)
 
