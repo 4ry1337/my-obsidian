@@ -6,6 +6,12 @@
 - [x] intro
 
 # Online publishing platform
+Outline:
+- Intro
+- Background
+- Trends
+- Tech Assessment
+- 
 
 ## Tech Stack
 - Next.js as frontend

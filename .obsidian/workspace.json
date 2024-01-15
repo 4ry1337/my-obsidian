@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Capstone/Capstone Project.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Capstone/Capstone Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Capstone/Capstone Project.md"
               }
             }
           },
@@ -155,11 +155,11 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Diagrams.md",
     "Capstone/Capstone Project.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20231217195136.png",
     "Capstone/Pasted image 20231217194810.png",
-    "Capstone/Diagrams.md",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20240115084751.png",
