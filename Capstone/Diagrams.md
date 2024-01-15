@@ -1,6 +1,6 @@
 # Architecture
 ```mermaid
-flowchart TB
+flowchart TD
 	subgraph users
 		a(Admin)
 		cm(Content Manager)
@@ -116,7 +116,11 @@ erDiagram
 ```
 
 # Use Case
-## Sequence Diagram
+```mermaid
+flowchart LR
+user(User)
+```
+# Sequence Diagram
 ```mermaid
 sequenceDiagram
 Alice ->> John: Hello John, how are you?
