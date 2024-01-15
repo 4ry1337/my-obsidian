@@ -220,3 +220,22 @@ We can define associated functions that don’t have `self` as their first par
 
 ### Multiple `impl` Blocks
 Each struct is allowed to have multiple `impl` blocks.
+
+## Enums
+[[Enumerators]], also referred to as enums. Enums allow you to define a type by enumerating its possible variants.
+
+### Defining an Enums
+
+```Rust
+enum IpAddrKind {
+    V4,
+    V6,
+}
+```
+
+### Enum Values
+
+```Rust
+let four = IpAddrKind::V4;
+let six = IpAddrKind::V6;
+```
