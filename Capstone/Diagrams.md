@@ -1,3 +1,29 @@
+# Use Case
+```mermaid
+flowchart LR
+user(User)
+admin(Admin)
+mod(Moderator)
+reg(sign up / login)
+ra(Read Article)
+wa(Write Article)
+subgraph Article Interactions
+	direction TD
+	la(Like Article)
+	ca(Comment Article)
+	sa(Share Article)
+	sa(Share Article)
+fu(Follow User)
+ep(Edit Profile)
+
+user --> reg
+user --> ra
+user --> wa
+user --> ai
+user --> fu
+user --> ep
+admin --> reg
+```
 # Architecture
 ```mermaid
 flowchart TD
@@ -113,28 +139,6 @@ erDiagram
 	Account ||--|| Profile : contains
 	Account ||--o{ Article : contains
 	Article }o--o{ Tag : contains
-```
-
-# Use Case
-```mermaid
-flowchart LR
-user(User)
-admin(Admin)
-mod(Moderator)
-reg(sign up / login)
-ra(Read Article)
-wa(Write Article)
-ai(Article Interactions)
-fu(Follow User)
-ep(Edit Profile)
-
-user --> reg
-user --> ra
-user --> wa
-user --> ai
-user --> fu
-user --> ep
-admin --> reg
 ```
 # Sequence Diagram
 ```mermaid
