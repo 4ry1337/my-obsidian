@@ -225,17 +225,26 @@ Each struct is allowed to have multiple `impl` blocks.
 [[Enumerators]], also referred to as enums. Enums allow you to define a type by enumerating its possible variants.
 
 ### Defining an Enums
-
 ```Rust
 enum IpAddrKind {
     V4,
     V6,
 }
 ```
+`IpAddrKind` is now a custom data type that we can use elsewhere in our code.
 
 ### Enum Values
-
+We can create instances of each of the two variants of `IpAddrKind` like this:
 ```Rust
 let four = IpAddrKind::V4;
 let six = IpAddrKind::V6;
+```
+Note that the variants of the enum are namespaced under its identifier, and we use a double colon to separate the two.
+```Rust
+fn route(ip_kind: IpAddrKind) {}
+```
+And we can call this function with either variant:
+```Rust
+route(IpAddrKind::V4);
+route(IpAddrKind::V6);
 ```
