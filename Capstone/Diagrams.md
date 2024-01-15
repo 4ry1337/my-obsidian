@@ -8,10 +8,9 @@ reg(sign up / login)
 ra(Read Article)
 wa(Write Article)
 subgraph Article Interactions
-	direction TD
+	direction TB
 	la(Like Article)
 	ca(Comment Article)
-	sa(Share Article)
 	sa(Share Article)
 end
 fu(Follow User)
@@ -20,9 +19,11 @@ ep(Edit Profile)
 user --> reg
 user --> ra
 user --> wa
-user --> ai
 user --> fu
 user --> ep
+user --> la
+user --> ca
+user --> sa
 admin --> reg
 ```
 # Architecture
