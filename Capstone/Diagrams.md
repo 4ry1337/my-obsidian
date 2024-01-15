@@ -46,7 +46,6 @@ flowchart TD
 	api --> promoetheus
 	promoetheus --> grafana
 ```
-![[Pasted image 20240115085216.png]]
 # System Design
 ```mermaid  
 flowchart TD

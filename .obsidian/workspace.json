@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Diagrams.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -155,14 +155,14 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Capstone/general arch.png",
-    "Capstone/Pasted image 20240115085216.png",
-    "Capstone/Pasted image 20231217194810.png",
     "Capstone/Capstone Project.md",
+    "Capstone/general arch.png",
+    "Capstone/Pasted image 20231217195136.png",
+    "Capstone/Pasted image 20231217194810.png",
+    "Capstone/Diagrams.md",
+    "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20240115084751.png",
-    "Capstone/Pasted image 20231217195136.png",
-    "Capstone/Diagrams.md",
     "Capstone/Research.md",
     "Dad.md",
     "Rust/Rust - User-defined Types.md",
@@ -200,7 +200,6 @@
     "Knowledge/Computing/Computer/Computer Programming",
     "Knowledge/Computing/Computer",
     "Knowledge/Computing",
-    "Computing/Sub-disciplines/Computer Science/Programming paradigms/Pasted image 20231219155630.png",
     "Capstone/Capstone Project.canvas",
     "Untitled.canvas"
   ]
