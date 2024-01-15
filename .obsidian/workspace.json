@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Diagrams.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -155,10 +155,16 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/general arch.png",
+    "Capstone/Pasted image 20240115085216.png",
+    "Capstone/Pasted image 20231217194810.png",
+    "Capstone/Capstone Project.md",
+    "Capstone/Pasted image 20231217224549.png",
+    "Capstone/Pasted image 20240115084751.png",
+    "Capstone/Pasted image 20231217195136.png",
     "Capstone/Diagrams.md",
     "Capstone/Research.md",
     "Dad.md",
-    "Capstone/Capstone Project.md",
     "Rust/Rust - User-defined Types.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
@@ -186,10 +192,7 @@
     "Computing/Computer/Computer Software/Operating System/Operating System.md",
     "Computing/Computer/Computer Software/Computer Software.md",
     "Computing/Computer/Computer Software/Operating System",
-    "Capstone/Pasted image 20231217194810.png",
-    "Capstone/Pasted image 20231217195136.png",
     "Capstone/Pasted image 20231217194900.png.md",
-    "Computing/Sub-disciplines/Computer Science/Control Flow.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",
@@ -198,9 +201,6 @@
     "Knowledge/Computing/Computer",
     "Knowledge/Computing",
     "Computing/Sub-disciplines/Computer Science/Programming paradigms/Pasted image 20231219155630.png",
-    "Capstone/Pasted image 20231217224549.png",
-    "Capstone/Pasted image 20231217194900.png",
-    "Japanese/Pasted image 20231114192049.png",
     "Capstone/Capstone Project.canvas",
     "Untitled.canvas"
   ]
