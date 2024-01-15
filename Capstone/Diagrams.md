@@ -17,6 +17,7 @@ flowchart TD
 	
 	redis[(Redis Cache)]
 	subgraph databases
+	direction LR
 	    neo4j[(Graph Database)]
 	    sql[(Article Database)]
 	end
@@ -119,6 +120,22 @@ erDiagram
 ```mermaid
 flowchart LR
 user(User)
+admin(Admin)
+mod(Moderator)
+reg(sign up / login)
+ra(Read Article)
+wa(Write Article)
+ai(Article Interactions)
+fu(Follow User)
+ep(Edit Profile)
+
+user --> reg
+user --> ra
+user --> wa
+user --> ai
+user --> fu
+user --> ep
+admin --> reg
 ```
 # Sequence Diagram
 ```mermaid
