@@ -92,7 +92,7 @@ flowchart TD
 erDiagram
 Account {
 	string id PK  
-	string userId  
+	string userId FK  
 	string type
 	string provider  
 	string providerAccountId  
@@ -115,7 +115,7 @@ Session {
 	string id PK
 	timestamp expires
 	string sessionToken
-	string userid
+	string userid FK
 }
 VerificationToken {
 	string identifier
@@ -124,9 +124,13 @@ VerificationToken {
 }
 Article {
 	string id PK
-	string[] author
+	string[] author FK
 	string content
-	string[] tags
+	string[] tags FK
+}
+Tag {
+	string label
+	int articleCount
 }
 ```
 # Sequence Diagram
