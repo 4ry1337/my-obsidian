@@ -22,23 +22,14 @@ subgraph Online Blogging Platform
 	search(Search User/Article/Publisher)
 
 	subgraph User
+		addWriters(Add Writers to Publisher)
+		removeWriters(Remove Writers from Publisher)
 		editProfile(Edit Profile)
 		follow(Follow Writer/Publisher)
 	end
 
 	subgraph Article
 		read(Read Article)
-		write(Write Article)
-		publish(Publish Article)
-		delete(Delete Article)
-		
-		subgraph Series
-			direction TB
-			creates(Crate Series)
-			pushs(Push Article to Series)
-			pops(Pop Article to Series)
-			reorders(Reorder Article to Series)
-		end
 		
 		subgraph Reading List
 			direction TB
@@ -52,6 +43,17 @@ subgraph Online Blogging Platform
 			like(Like Article)
 			comment(Comment Article)
 			share(Share Article)
+		end
+		
+		write(Write Article)
+		publish(Publish Article)
+		delete(Delete Article)
+		subgraph Series
+			direction TB
+			creates(Crate Series)
+			pushs(Push Article to Series)
+			pops(Pop Article to Series)
+			reorders(Reorder Article to Series)
 		end
 	end
 
@@ -75,6 +77,8 @@ Users --- Auth
 Users --- search
 Users --- editProfile
 
+p --- addWriters
+p --- removeWriters
 
 r --- read
 r --- follow
