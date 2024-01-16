@@ -32,40 +32,37 @@ flowchart LR
   deleteArticle(Delete Article)
  end
 
- user --> auth
- user --> read
- user --> write
- user --> follow
- user --> editp
- user --> like
- user --> commnet
- user --> share
- user --> bookmark
+ user --- auth
+ user --- read
+ user --- write
+ user --- follow
+ user --- editp
+ user --- like
+ user --- commnet
+ user --- share
+ user --- bookmark
 
- admin --> auth
- admin --> deleteUsers
- admin --> listOfUsers
- admin --> ban
+ admin --- auth
+ admin --- deleteUsers
+ admin --- listOfUsers
+ admin --- ban
  
- admin --> read
- admin --> write
- admin --> like
- admin --> commnet
- admin --> share
- admin --> bookmark
- 
- admin --> deleteArticle
+ admin --- read
+ admin --- write
+ admin --- like
+ admin --- commnet
+ admin --- share
+ admin --- bookmark
+ admin --- deleteArticle
 
- mod --> auth
- mod --> read
- mod --> editp
- mod --> like
- mod --> commnet
- mod --> share
- mod --> bookmark
- 
- mod --> deleteArticle
-
+ mod --- auth
+ mod --- read
+ mod --- editp
+ mod --- like
+ commnet
+ share
+ bookmark
+ deleteArticle --- mod 
 ```
 # Architecture
 ```mermaid
