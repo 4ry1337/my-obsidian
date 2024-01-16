@@ -29,6 +29,7 @@ subgraph Online Blogging Platform
 	end
 
 	subgraph Article
+		direction TB
 		read(Read Article)
 		
 		subgraph Reading List
@@ -48,6 +49,12 @@ subgraph Online Blogging Platform
 		write(Write Article)
 		publish(Publish Article)
 		delete(Delete Article)
+		subgraph Media
+			direction TB
+			getMedia(Get Media Files)
+			upload(Upload File)
+			remove(Remove File)
+		end
 		subgraph Series
 			direction TB
 			creates(Crate Series)
@@ -96,6 +103,9 @@ w --- creates
 w --- pushs
 w --- pops
 w --- reorders
+w --- getMedia
+w --- upload
+w --- remove
 
 a --- getAccounts
 a --- getAccount
