@@ -90,10 +90,45 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
+model Session {  
+id String @id @default(cuid())  
+sessionToken String @unique  
+userId String  
+expires DateTime  
+user User @relation(fields: [userId], references: [id], onDelete: Cascade)  
+}  
+  
+model User {  
+id String @id @default(cuid())  
+name String?  
+email String? @unique  
+emailVerified DateTime?  
+image String?  
+accounts Account[]  
+sessions Session[]  
+}  
+  
+model VerificationToken {  
+identifier String  
+token String @unique  
+expires DateTime  
+  
+@@unique([identifier, token])  
+}
 	Account {
-		string Id PK
-		string Profile FK
-		string[] Articles FK
+	string id PK  
+	string userId  
+	string type
+	string provider  
+	string providerAccountId  
+	string? refresh_token  
+	string? access_token  
+	int? expires_at  
+	string? token_type  
+	string? scope  
+	string? id_token  
+	string? session_state    
+@@unique([provider, providerAccountId])  
 	}
 	Profile {
 		string Id PK
