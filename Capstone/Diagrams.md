@@ -90,45 +90,19 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-model Session {  
-id String @id @default(cuid())  
-sessionToken String @unique  
-userId String  
-expires DateTime  
-user User @relation(fields: [userId], references: [id], onDelete: Cascade)  
-}  
-  
-model User {  
-id String @id @default(cuid())  
-name String?  
-email String? @unique  
-emailVerified DateTime?  
-image String?  
-accounts Account[]  
-sessions Session[]  
-}  
-  
-model VerificationToken {  
-identifier String  
-token String @unique  
-expires DateTime  
-  
-@@unique([identifier, token])  
-}
 	Account {
-	string id PK  
-	string userId  
-	string type
-	string provider  
-	string providerAccountId  
-	string? refresh_token  
-	string? access_token  
-	int? expires_at  
-	string? token_type  
-	string? scope  
-	string? id_token  
-	string? session_state    
-@@unique([provider, providerAccountId])  
+		string id PK  
+		string userId  
+		string type
+		string provider  
+		string providerAccountId  
+		string refresh_token  
+		string access_token  
+		int expires_at  
+		string token_type  
+		string scope  
+		string id_token  
+		string session_state
 	}
 	Profile {
 		string Id PK
@@ -136,20 +110,6 @@ expires DateTime
 		string[] history FK
 		string[] readinglist FK
 	}
-	ProfileHistory {
-	}
-	Article {
-		string Id PK
-		string[] tags FK
-		views int
-	}
-	Tag {
-		string Id PK
-		label string "unique"
-	}
-	Account ||--|| Profile : contains
-	Account ||--o{ Article : contains
-	Article }o--o{ Tag : contains
 ```
 # Sequence Diagram
 ```mermaid

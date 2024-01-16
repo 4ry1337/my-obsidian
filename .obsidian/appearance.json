@@ -5,7 +5,7 @@
   "cssTheme": "Catppuccin",
   "baseFontSizeAction": false,
   "accentColor": "",
-  "textFontFamily": "iA Writer Mono S",
-  "interfaceFontFamily": "iA Writer Duo S,iA Writer Mono V Regular",
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
   "showViewHeader": true
 }
