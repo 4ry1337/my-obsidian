@@ -1,5 +1,72 @@
 # Use Case
+```mermaid
+flowchart LR
+ user(User)
+ admin(Admin)
+ mod(Moderator)
+ 
+ auth(sign up / login)
+ read(Read Article)
+ write(Write Article)
+ follow(Follow User)
+ bookmark(Create a bookmark)
+ 
+ editp(Edit Profile)
+ 
+ subgraph Article Interactions
+  direction TB
+  like(Like Article)
+  comment(Comment Article)
+  share(Share Article)
+ end
+ 
+ subgraph Admin account management
+  direction TB
+  deleteUsers(Delete Users)
+  listOfUsers(See the list of Users)
+  ban(Ban users)
+ end
+ 
+ subgraph Article management
+  direction TB
+  deleteArticle(Delete Article)
+ end
 
+ user --> auth
+ user --> read
+ user --> write
+ user --> follow
+ user --> editp
+ user --> like
+ user --> commnet
+ user --> share
+ user --> bookmark
+
+ admin --> auth
+ admin --> deleteUsers
+ admin --> listOfUsers
+ admin --> ban
+ 
+ admin --> read
+ admin --> write
+ admin --> like
+ admin --> commnet
+ admin --> share
+ admin --> bookmark
+ 
+ admin --> deleteArticle
+
+ mod --> auth
+ mod --> read
+ mod --> editp
+ mod --> like
+ mod --> commnet
+ mod --> share
+ mod --> bookmark
+ 
+ mod --> deleteArticle
+
+```
 # Architecture
 ```mermaid
 flowchart TD
@@ -119,7 +186,7 @@ Session {
 }
 VerificationToken {
 	string identifier
-	string token
+	string token UK
 	timestamp expires
 }
 Article {
