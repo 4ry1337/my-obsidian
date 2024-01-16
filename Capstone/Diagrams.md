@@ -1,15 +1,19 @@
 # Use Case
 ```mermaid
 flowchart LR
- user(User)
- admin(Admin)
- mod(Moderator)
+user((User))
+admin((Admin))
+mod((Moderator))
+
+auth(sign up / login)
  
- auth(sign up / login)
- read(Read Article)
- write(Write Article)
- follow(Follow User)
- bookmark(Create a bookmark)
+read(Read Article)
+write(Write Article)
+follow(Follow User)
+subgraph 
+	createReadingList(Create Reading List)
+	addToReadingList(Add Article to Reading List)
+	removeToReadingList(Remove Article to Reading List)
  
  editp(Edit Profile)
  
@@ -22,9 +26,11 @@ flowchart LR
  
  subgraph Admin account management
   direction TB
-  deleteUsers(Delete Users)
-  listOfUsers(See the list of Users)
-  ban(Ban users)
+  editAccount(Edit Account)
+  deleteUser(Delete User)
+  getUsers(Get the list of Users)
+  getUser(Get user by id)
+  banUser(Ban user)
  end
  
  subgraph Article management
@@ -42,26 +48,14 @@ flowchart LR
  user --- share
  user --- bookmark
 
- admin --- auth
  admin --- deleteUsers
- admin --- listOfUsers
- admin --- ban
- 
+ admin --- getUsers
+ admin --- getUser
+ admin --- banUser
  admin --- read
- admin --- write
- admin --- like
- admin --- commnet
- admin --- share
- admin --- bookmark
  admin --- deleteArticle
 
- mod --- auth
- mod --- read
- mod --- editp
- mod --- like
- commnet
- share
- bookmark
+ bookmark --- mod
  deleteArticle --- mod 
 ```
 # Architecture
