@@ -2,6 +2,7 @@
 ```mermaid
 flowchart LR
 subgraph Users
+	direction TB
 	r((Reader))
 	w((Writer))
 	p((Publisher))
@@ -11,16 +12,16 @@ a((Admin))
 m((Moderator))
 
 subgraph Online Blogging Platform
-
+	subgraph Auth
+		signin(Sign In)
+		signup(Sign Up)
+		google(Google oauth)
+		apple(apple oauth) 
+	end
+	
 	search(Search User/Article/Publisher)
 
 	subgraph User
-		subgraph Auth
-			signin(Sign In)
-			signup(Sign Up)
-			google(Google oauth)
-			apple(apple oauth) 
-		end
 		editProfile(Edit Profile)
 		follow(Follow Writer/Publisher)
 	end
@@ -30,19 +31,22 @@ subgraph Online Blogging Platform
 		write(Write Article)
 		publish(Publish Article)
 		delete(Delete Article)
-		subgrapg Series
+		
+		subgraph Series
 			direction TB
-			cs(Crate Series)
-			as(Add Article to Series)
-			ds(Remove Article to Series)
-			rs(Re Article to Series)
+			creates(Crate Series)
+			pushs(Push Article to Series)
+			pops(Pop Article to Series)
+			reorders(Reorder Article to Series)
 		end
+		
 		subgraph Reading List
 			direction TB
 			crl(Create Reading List)
 			arl(Add Article to Reading List)
 			rrl(Remove Article to Reading List)
 		end
+		
 		subgraph Article Interactions
 			direction TB
 			like(Like Article)
@@ -67,24 +71,27 @@ subgraph Online Blogging Platform
 	end
 end
 
-r --- Auth
-w --- Auth
-p --- Auth
-r --- follow
+Users --- Auth
 Users --- search
 Users --- editProfile
 
-w --- write
-w --- publish
-w --- delete
-r --- read
 
+r --- read
+r --- follow
 r --- crl
 r --- arl
 r --- rrl
 r --- like
 r --- comment
 r --- share
+
+w --- write
+w --- publish
+w --- delete
+w --- creates
+w --- pushs
+w --- pops
+w --- reorders
 
 a --- getAccounts
 a --- getAccount
