@@ -36,22 +36,24 @@ subgraph Online Blogging Platform
 		
 		read(Read Article)
 		
-		subgraph Article Interactions
+		subgraph Interactions
 			direction TB
 			like(Like Article)
 			comment(Comment Article)
 			share(Share Article)
 		end
 		
-		subgraph Reading List
+		subgraph Lists
 			direction TB
 			crl(Create Reading List)
 			arl(Add Article to Reading List)
 			rrl(Remove Article to Reading List)
 		end
 		
+		analyse(Analyse Articles)
 		write(Write Article)
 		publish(Publish Article)
+		unpublish(Unpublish Article)
 		delete(Delete Article)
 		
 		subgraph Media
@@ -94,15 +96,13 @@ p --- removeWriters
 
 r --- read
 r --- follow
-r --- crl
-r --- arl
-r --- rrl
-r --- like
-r --- comment
-r --- share
+r --- Lists
+r --- Interactions
 
 w --- write
 w --- publish
+w --- unpublish
+w --- analyse
 w --- delete
 w --- creates
 w --- pushs
@@ -121,6 +121,10 @@ a --- banAccount
 m --- approveArticle
 m --- returnArticle
 ```
+
+
+
+
 # Architecture
 ```mermaid
 flowchart TD
@@ -253,11 +257,4 @@ Tag {
 	string label
 	int articleCount
 }
-```
-# Sequence Diagram
-```mermaid
-sequenceDiagram
-Alice ->> John: Hello John, how are you?
-John -->> Alice: Great!
-Alice -) John: See you later!
 ```
