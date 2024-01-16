@@ -90,26 +90,44 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-	Account {
-		string id PK  
-		string userId  
-		string type
-		string provider  
-		string providerAccountId  
-		string refresh_token  
-		string access_token  
-		int expires_at  
-		string token_type  
-		string scope  
-		string id_token  
-		string session_state
-	}
-	Profile {
-		string Id PK
-		string settings
-		string[] history FK
-		string[] readinglist FK
-	}
+Account {
+	string id PK  
+	string userId  
+	string type
+	string provider  
+	string providerAccountId  
+	string refresh_token  
+	string access_token  
+	int expires_at  
+	string token_type  
+	string scope  
+	string id_token  
+	string session_state
+}
+User {
+	string id PK
+	string name
+	string email
+	timestamp emailVerified
+	string image
+}
+Session {
+	string id PK
+	timestamp expires
+	string sessionToken
+	string userid
+}
+VerificationToken {
+	string identifier
+	string token
+	timestamp expires
+}
+Article {
+	string id PK
+	string[] author
+	string content
+	string[] tags
+}
 ```
 # Sequence Diagram
 ```mermaid
