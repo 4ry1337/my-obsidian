@@ -10,77 +10,88 @@ end
 a((Admin))
 m((Moderator))
 
-subgraph User
-	auth(sign up / login)
-	editUser(Edit User)
-	follow(Follow Writer/Publisher)
+subgraph Online Blogging Platform
+
+	search(Search User/Article/Publisher)
+
+	subgraph User
+		subgraph Auth
+			signin(Sign In)
+			signup(Sign Up)
+			google(Google oauth)
+			apple(apple oauth) 
+		end
+		editProfile(Edit Profile)
+		follow(Follow Writer/Publisher)
+	end
+
+	subgraph Article
+		read(Read Article)
+		write(Write Article)
+		publish(Publish Article)
+		delete(Delete Article)
+		subgrapg Series
+			direction TB
+			cs(Crate Series)
+			as(Add Article to Series)
+			ds(Remove Article to Series)
+			rs(Re Article to Series)
+		end
+		subgraph Reading List
+			direction TB
+			crl(Create Reading List)
+			arl(Add Article to Reading List)
+			rrl(Remove Article to Reading List)
+		end
+		subgraph Article Interactions
+			direction TB
+			like(Like Article)
+			comment(Comment Article)
+			share(Share Article)
+		end
+	end
+
+	subgraph Admin Account Management
+		direction TB
+		getAccounts(Get Accounts)
+		getAccount(Get Account)
+		editAccount(Edit Account)
+		deleteAccount(Delete Account)
+		banAccount(Ban Account)
+	end
+ 
+	subgraph Moderator Article management
+		direction TB
+		approveArticle(Approve Article)
+		unpublishArticle(Unpublish Article)
+	end
 end
 
-search(Search User/Article/Publisher)
-
-r --- auth
-w --- auth
-p --- auth
+r --- Auth
+w --- Auth
+p --- Auth
 r --- follow
 Users --- search
-Users --- editUser
-
-subgraph Article
-	read(Read Article)
-	write(Write Article)
-	publish(Publish Article)
-	delete(Delete Article)
-end
+Users --- editProfile
 
 w --- write
 w --- publish
 w --- delete
 r --- read
 
-subgraph Reading List
-	direction TB
-	crl(Create Reading List)
-	arl(Add Article to Reading List)
-	rrl(Remove Article to Reading List)
-end
-
 r --- crl
 r --- arl
 r --- rrl
-
-getUser(Get user by id)
- 
-subgraph Article Interactions
-	direction TB
-	like(Like Article)
-	comment(Comment Article)
-	share(Share Article)
-end
-
 r --- like
 r --- comment
 r --- share
-
-subgraph Admin account management
-	direction TB
-	getAccounts(Get Accounts)
-	getAccount(Get Account)
-	editAccount(Edit Account)
-	deleteAccount(Delete Account)
-	banAccount(Ban Account)
-end
 
 a --- getAccounts
 a --- getAccount
 a --- editAccount
 a --- deleteAccount
 a --- banAccount
- 
-subgraph Article management
-	direction TB
-	approveArticle(Approve Article)
-	unpublishArticle(Unpublish Article)
-end
+
 m --- approveArticle
 m --- unpublishArticle
 ```
