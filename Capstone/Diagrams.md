@@ -1,9 +1,12 @@
 # Use Case
 ```mermaid
 flowchart LR
-r((Reader))
-w((Writer))
-p((Publisher))
+subgraph User
+	r((Reader))
+	w((Writer))
+	p((Publisher))
+end
+
 a((Admin))
 m((Moderator))
 
@@ -11,6 +14,7 @@ auth(sign up / login)
 
 r --- auth
 w --- auth
+p --- auth
 
 read(Read Article)
 
@@ -21,17 +25,29 @@ follow(Follow Writer/Publisher)
 r --- follow
 
 write(Write Article)
+publish(Publish Article)
+
+w --- write
+w --- publish
 
 subgraph Reading List
 	direction TB
-	createReadingList(Create Reading List)
-	addToReadingList(Add Article to Reading List)
-	removeToReadingList(Remove Article to Reading List)
+	crl(Create Reading List)
+	arl(Add Article to Reading List)
+	rrl(Remove Article to Reading List)
 end
 
-getUser(Get user by id)
+r --- crl
+r --- arl
+r --- rrl
 
-editp(Edit Profile)
+search(Search User/Article/Publisher)
+editProfile(Edit Profile)
+
+User --- search
+User --- editProfile
+
+getUser(Get user by id)
  
 subgraph Article Interactions
 	direction TB
@@ -40,13 +56,24 @@ subgraph Article Interactions
 	share(Share Article)
 end
 
+r --- like
+r --- comment
+r --- share
+
 subgraph Admin account management
 	direction TB
-	editAccount(Edit Account)
-	deleteUser(Delete User)
 	getUsers(Get the list of Users)
+	getUser(Get User)
+	editUser(Edit User)
+	deleteUser(Delete User)
 	banUser(Ban user)
 end
+
+a --- getUsers
+a --- getUser
+a --- editUser
+a --- deleteUser
+a --- banUser
  
 subgraph Article management
 	direction TB
