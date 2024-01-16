@@ -1,7 +1,7 @@
 # Use Case
 ```mermaid
 flowchart LR
-subgraph User
+subgraph Users
 	r((Reader))
 	w((Writer))
 	p((Publisher))
@@ -10,25 +10,32 @@ end
 a((Admin))
 m((Moderator))
 
-auth(sign up / login)
+subgraph User
+	auth(sign up / login)
+	editUser(Edit User)
+	follow(Follow Writer/Publisher)
+end
+
+search(Search User/Article/Publisher)
 
 r --- auth
 w --- auth
 p --- auth
-
-read(Read Article)
-
-r --- read
-
-follow(Follow Writer/Publisher)
-
 r --- follow
+Users --- search
+Users --- editUser
 
-write(Write Article)
-publish(Publish Article)
+subgraph Article
+	read(Read Article)
+	write(Write Article)
+	publish(Publish Article)
+	delete(Delete Article)
+end
 
 w --- write
 w --- publish
+w --- delete
+r --- read
 
 subgraph Reading List
 	direction TB
@@ -40,12 +47,6 @@ end
 r --- crl
 r --- arl
 r --- rrl
-
-search(Search User/Article/Publisher)
-editProfile(Edit Profile)
-
-User --- search
-User --- editProfile
 
 getUser(Get user by id)
  
@@ -62,25 +63,26 @@ r --- share
 
 subgraph Admin account management
 	direction TB
-	getUsers(Get the list of Users)
-	getUser(Get User)
-	editUser(Edit User)
-	deleteUser(Delete User)
-	banUser(Ban user)
+	getAccounts(Get Accounts)
+	getAccount(Get Account)
+	editAccount(Edit Account)
+	deleteAccount(Delete Account)
+	banAccount(Ban Account)
 end
 
-a --- getUsers
-a --- getUser
-a --- editUser
-a --- deleteUser
-a --- banUser
+a --- getAccounts
+a --- getAccount
+a --- editAccount
+a --- deleteAccount
+a --- banAccount
  
 subgraph Article management
 	direction TB
-	ediArticle(Edit Article)
+	approveArticle(Approve Article)
 	unpublishArticle(Unpublish Article)
-	deleteArticle(Delete Article)
-end 
+end
+m --- approveArticle
+m --- unpublishArticle
 ```
 # Architecture
 ```mermaid
