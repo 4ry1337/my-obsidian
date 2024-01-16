@@ -12,7 +12,9 @@ a((Admin))
 m((Moderator))
 
 subgraph Online Blogging Platform
+	direction TB
 	subgraph Auth
+		direction TB
 		signin(Sign In)
 		signup(Sign Up)
 		google(Google oauth)
@@ -22,6 +24,7 @@ subgraph Online Blogging Platform
 	search(Search User/Article/Publisher)
 
 	subgraph User
+		direction TB
 		addWriters(Add Writers to Publisher)
 		removeWriters(Remove Writers from Publisher)
 		editProfile(Edit Profile)
@@ -30,14 +33,8 @@ subgraph Online Blogging Platform
 
 	subgraph Article
 		direction TB
-		read(Read Article)
 		
-		subgraph Reading List
-			direction TB
-			crl(Create Reading List)
-			arl(Add Article to Reading List)
-			rrl(Remove Article to Reading List)
-		end
+		read(Read Article)
 		
 		subgraph Article Interactions
 			direction TB
@@ -46,9 +43,17 @@ subgraph Online Blogging Platform
 			share(Share Article)
 		end
 		
+		subgraph Reading List
+			direction TB
+			crl(Create Reading List)
+			arl(Add Article to Reading List)
+			rrl(Remove Article to Reading List)
+		end
+		
 		write(Write Article)
 		publish(Publish Article)
 		delete(Delete Article)
+		
 		subgraph Media
 			direction TB
 			getMedia(Get Media Files)
@@ -76,7 +81,7 @@ subgraph Online Blogging Platform
 	subgraph Moderator Article management
 		direction TB
 		approveArticle(Approve Article)
-		unpublishArticle(Unpublish Article)
+		returnArticle(Return Article)
 	end
 end
 
@@ -114,7 +119,7 @@ a --- deleteAccount
 a --- banAccount
 
 m --- approveArticle
-m --- unpublishArticle
+m --- returnArticle
 ```
 # Architecture
 ```mermaid
