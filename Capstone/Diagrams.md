@@ -260,6 +260,8 @@ Article {
 	string[] author FK
 	string content
 	string[] tags FK
+	timestamp createdAt
+	timestamp lastEditedAt
 }
 Tag {
 	string label
