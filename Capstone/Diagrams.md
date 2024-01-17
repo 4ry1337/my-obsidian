@@ -256,12 +256,13 @@ VerificationToken {
 	timestamp expires
 }
 Article {
-	string id PK
-	string[] author FK
-	string content
+	bigint article_id PK
+	varchar article_name
+	varchar relative_path
+	bigint checksum
+	timestamp created_at
+	timestamp last_modified
 	string[] tags FK
-	timestamp createdAt
-	timestamp lastEditedAt
 }
 Tag {
 	string label
