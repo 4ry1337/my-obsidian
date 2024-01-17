@@ -148,15 +148,17 @@ flowchart TD
 	
 	api(API)
 	
-	redis[(Redis Cache)]
 	subgraph databases
-	direction LR
-	    neo4j[(Graph Database)]
-	    sql[(Article Database)]
+		direction LR
+	    graphdb[(Graph Database)]
+	    db[(Database)]
 	end
-    minio[(MINIO Object Storage)]
+	
+	cache[(Cache)]
+    os[(Object Storage)]
     
     queue{Event Queue}
+    
     ns(Notification Service)
     
     promoetheus(Promoetheus: Gather Metrics)
@@ -169,8 +171,8 @@ flowchart TD
 	users --> client
 	client <--> api
 	api <--> databases
-	api <--> minio
-	api <--> redis
+	api <--> os
+	api <--> cache
 	api <--> queue
 	queue --> ns
 	api --> logstash
