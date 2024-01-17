@@ -265,4 +265,9 @@ Tag {
 	string label
 	int articleCount
 }
+Series {
+	string id PK
+	string author FK
+	string[]
+}
 ```
