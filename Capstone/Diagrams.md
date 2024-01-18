@@ -319,13 +319,10 @@ list_article {
 }
 activity_steam {
 	serial id PK
+	text summary
 	integer user_id
-	tinyint action_id
-	tinyint object_id
-	datetime date_created
-}
-action {
-	
+	integer object_id
+	timestampz date_created
 }
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
