@@ -199,8 +199,10 @@ users {
 	varchar(255) bio
 	
 	text[] urls
+	
 	integer follower_count
 	integer following_count
+	
 	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
 	
 	timestampz created_at
@@ -241,6 +243,9 @@ articles {
 	varchar article_name
 	varchar relative_path
 	bigint checksum
+	
+	integer like_count
+	integer comment_count
 	
 	text[] tag_ids FK
 	integer[] reference FK
