@@ -226,9 +226,9 @@ erDiagram
 accounts {
 	serial id PK "NOT NULL"  
 	integer userId FK "NOT NULL"
-	varchar(255) type "NOT NULL"
-	varchar(255) provider "NOT NULL"
-	varchar(255) providerAccountId
+	varchar type "NOT NULL"
+	varchar provider "NOT NULL"
+	varchar providerAccountId
 	text refresh_token
 	text access_token 
 	bigint expires_at
@@ -242,7 +242,7 @@ users {
 	serial id PK
 	varchar username UK
 	varchar name
-	varchar(255) email
+	varchar email
 	timestampz emailVerified
 	text image
 	
@@ -251,7 +251,9 @@ users {
 	integer following_count
 	integer[] following FK
 
-	text contact_info
+	text[] urls
+
+	
 
 	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
@@ -259,7 +261,7 @@ users {
 sessions {
 	serial id PK
 	timestamp expires "NOT NULL"
-	varchar(255) sessionToken "NOT NULL"
+	varchar sessionToken "NOT NULL"
 	integer userid FK "NOT NULL"
 }
 verification_token {
@@ -273,8 +275,8 @@ users ||--|{ accounts : ""
 
 articles {
 	bigint article_id PK
-	varchar(255) article_name
-	varchar(255) relative_path
+	varchar article_name
+	varchar relative_path
 	bigint checksum
 	timestampz created_at
 	timestampz last_modified
