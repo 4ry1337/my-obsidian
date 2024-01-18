@@ -121,16 +121,6 @@ a --- banAccount
 m --- approveArticle
 m --- returnArticle
 ```
-
-
-# Sequence Diagram
-```mermaid
-sequenceDiagram
-Alice ->> John: Hello John, how are you?
-John -->> Alice: Great!
-Alice -) John: See you later!
-```
-
 # Architecture
 ```mermaid
 flowchart TD
@@ -181,45 +171,6 @@ flowchart TD
 	api --> promoetheus
 	promoetheus --> grafana
 ```
-# System Design
-```mermaid  
-flowchart TD
-	client["Client"]
-	lb{Load Balancer}
-    
-	bs(Backend Service)
-    fan-out(Fan-out Services)
-    rs(Recommendation Service)
-    as(Analysitcs Service)
-    ars(Article Service)
-    ac(Article Cache)
-    afs(Article Feed Service)
-    afc(Article Feed Cache)
-    ns(Notification Service)
-    ls(Log Service)
-    ss(Search Service)
-    
-	cs(Collab Service)
-    
-    client --> lb
-    lb --> bs
-    bs --> fan-out
-    fan-out --> as 
-    fan-out --> ls
-    fan-out --> ss
-    fan-out --> rs
-    bs --> ns
-    bs --> ars
-    ars --> ac
-    bs --> afs
-    afs --> afc
-```
-
-# Components
-```mermaid
-flowchart TD
-
-```
 # Models
 ```mermaid
 erDiagram
@@ -269,9 +220,9 @@ verification_token {
 	timestampz expires "NOT NULL"
 }
 follow {
-	integer follower_id PK, FK
+	integer follower_id PK, FK "Always User"
 	integer following_id PK, FK
-	enum follow_type "User, Publisher, List, Series, Tags"
+	enum follow_type "User, Publisher, List, Series"
 }
 articles {
 	serial article_id PK
@@ -315,6 +266,7 @@ series {
 	text owner_id FK
 	text label
 	text image
+	integer follower_count
 	timestampz created_at
 	timestampz last_modified
 }
@@ -332,6 +284,8 @@ publishers {
 	
 	varchar(255) bio
 	
+	integer follower_count
+	
 	timestampz created_at
 	timestampz last_modified
 }
@@ -346,6 +300,7 @@ lists {
 	text label
 	text image
 	boolean visibility
+	integer follower_count
 	timestampz created_at
 	timestampz last_modified
 }
@@ -359,22 +314,31 @@ users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
 
+users }o--o{ follow : follow_follower_id_fkey
+users |o--|{ lists : list_user_id_fkey
+users }o--o{ publisher_user : publisher_user_user_id_fkey
+users }o--o{ articles : articles_users_ids_fkey
+
+
+follow }o--o{ users : follow_following_id_type_users_fkey
+follow }o--o{ lists : follow_following_id_type_lists_fkey
+follow }o--o{ series : follow_following_id_type_series_fkey
+follow }o--o{ publishers : follow_following_id_type_publishers_fkey
+
+lists }|--|{ list_article: list_article_list_id_fkey
+list_article }o--o{ articles: list_article_article_id_fkey 
+
+publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
+
+users }o--o{ series: series_owner_id_fkey
+publishers }o--o{ series: series_owner_id_fkey
+
+publishers |o--o{ articles : articles_publisher_id_fkey
+
 articles |o--o{ articles : articles_reference_fkey
 articles ||--|{ article_version : article_article_version_id_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 
-users |o--|{ lists : list_user_id_fkey
-lists }|--|{ list_article: list_article_list_id_fkey
-list_article }o--o{ articles: list_article_article_id_fkey 
-
-users }o--o{ publisher_user : publisher_user_user_id_fkey
-publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
-
-users }o--o{ articles : articles_users_ids_fkey
-publishers |o--o{ articles : articles_publisher_id_fkey
-
-users }o--o{ series: series_owner_id_fkey
-publishers }o--o{ series: series_owner_id_fkey
 articles }|--|| series : article_series_id_fkey
 
 users }|--|{ tags : users_tag_ids_fkey
