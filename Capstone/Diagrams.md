@@ -309,10 +309,20 @@ publishers {
 	text[] urls
 	text[] tag_ids
 	
+	integer follower_count
+	integer following_count
+	
 	varchar(255) bio
 	
 	timestampz created_at
 	timestampz last_modified
+}
+publisher_snapshot {
+	serial id PK
+	integer publisher_id FK
+	integer follower_count
+	integer following_count
+	timestampz created_at
 }
 publisher_user {
 	integer user_id PK, FK "NOT NULL"
@@ -333,7 +343,7 @@ list_article {
 	integer article_id PK, FK
 	timestampz created_at
 }
-activity_steam {
+activity_stream {
 	serial id PK
 	text summary
 	integer action_id FK
@@ -375,8 +385,12 @@ users }o--o{ publisher_user : publisher_user_user_id_fkey
 publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
 
-users }o--o{ activity_steam: activity_steam_actor_id
-activity_steam }|--|{ action: activity_steam_action_id
+users }o--o{ activity_stream: activity_steam_actor_id_fkey
+activity_stream }|--|{ action: activity_steam_action_id_fkey
+
+users }o--o{ user_snapshot: user_snapshot_user_id_fkey
+articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
+publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
 
 users }|--|{ tags : users_tag_ids_fkey
 publishers }|--|{ tags : publishers_tag_ids_fkey
