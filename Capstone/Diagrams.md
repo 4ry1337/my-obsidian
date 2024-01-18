@@ -237,13 +237,18 @@ accounts {
 	text id_token
 	text session_state
 }
+
 users {
 	serial id PK
-	varchar(255) username
 	varchar(255) name
 	varchar(255) email
 	timestampz emailVerified
 	text image
+
+	
+
+	enum role "ADMIN, MANAGER, USER. default USER"
+	varchar(255) bio
 }
 sessions {
 	serial id PK
