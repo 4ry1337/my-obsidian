@@ -237,7 +237,6 @@ accounts {
 	text id_token
 	text session_state
 }
-
 users {
 	serial id PK
 	varchar username UK
@@ -250,13 +249,10 @@ users {
 	integer[] followers FK
 	integer following_count
 	integer[] following FK
-
 	text[] urls
-
-	text[] interests
-
-	integer[] articles FK
-
+	text[] tag_ids FK
+	integer[] article_ids FK
+	integer[] series_ids FK
 	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
 }
@@ -271,25 +267,19 @@ verification_token {
 	text token UK "NOT NULL"
 	timestampz expires "NOT NULL"
 }
-users ||--|{ verification_token : ""
-users ||--|{ sessions : ""
-users ||--|{ accounts : ""
-
 articles {
 	bigint article_id PK
 	integer publisher_id FK
-	integer[] written_by FK
+	integer[] user_id FK
 	varchar article_name
 	varchar relative_path
 	bigint checksum
 	timestampz created_at
 	timestampz last_modified
-	integer series FK
+	integer series_id FK
 	real series_order
-	text[] tags FK
+	text[] tag_ids FK
 }
-users }o--o{ articles : written_by
-
 article_version {
 	bigint article_version_id PK
 	bigint article_id FK
@@ -297,7 +287,6 @@ article_version {
 	bigint version_number
 	timestampz last_modified
 }
-articles ||--|{ article_version : article_article_version_
 article_block {
 	bigint block_id PK
 	bigint article_version_id FK
@@ -309,13 +298,46 @@ tags {
 	text label PK
 	int articleCount
 }
-articles }|--|{ tags : uses
-users }|--|{ tags : interests
 series {
 	serial id PK
 	text owner FK
 	integer articles
 }
-series }|--|| articles : contains
-users }o--o{ series: owned_by
+publishers {
+	serial id PK
+	varchar username UK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	text image
+	
+	integer follower_count
+	integer[] followers FK
+	integer following_count
+	integer[] following FK
+	text[] urls
+	text[] tag_ids FK
+	integer[] article_ids FK
+	integer[] series_ids FK
+	enum role "ADMIN, MANAGER, USER. default USER"
+	varchar(255) bio
+}
+users ||--|{ verification_token : ""
+users ||--|{ sessions : ""
+users ||--|{ accounts : ""
+
+users }o--o{ articles : articles_users_id_fkey
+
+series }|--|| articles : article_series_id_fkey
+
+articles ||--|{ article_version : article_article_version_id_fkey
+
+article_version ||--|{ article_block : article_version_article_block_id_fkey
+
+users }o--o{ series: users_series_ids_fkey
+
+articles }|--|{ tags : articles_tag_ids_fkey
+users }|--|{ tags : users_tag_ids_fkey
+
+
 ```
