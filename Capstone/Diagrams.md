@@ -239,16 +239,13 @@ accounts {
 }
 users {
 	serial id PK
-	varchar username UK
 	varchar name
 	varchar email
 	timestampz emailVerified
 	approved boolean
+	
 	text image
 	varchar(255) bio
-	
-	integer follower_count
-	integer following_count
 	
 	text[] urls
 	
@@ -268,7 +265,7 @@ verification_token {
 articles {
 	bigint article_id PK
 	integer publisher_id FK
-	integer[] user_id FK
+	integer[] user_ids FK
 	varchar article_name
 	varchar relative_path
 	bigint checksum
@@ -297,9 +294,9 @@ tags {
 	int articleCount
 }
 series {
-	serial id PK
-	text owner FK
-	integer articles
+	serial series_id PK
+	text owner_id FK
+	text label
 }
 publishers {
 	serial id PK
@@ -309,13 +306,9 @@ publishers {
 	timestampz emailVerified
 	text image
 	
-	integer follower_count
-	integer[] followers FK
-	
 	text[] urls
-	text[] tag_ids FK
-	integer[] article_ids FK
-	integer[] series_ids FK
+	text[] tag_ids
+	
 	varchar(255) bio
 }
 publisher_user {
@@ -323,13 +316,11 @@ publisher_user {
 	integer publisher_id PK, FK "NOT NULL"
 	enum role_id "Writer Manager, Article Manager, Ad Manager"
 }
-list {
+lists {
 	serial list_id PK
 	integer user_id FK
 	text label
 	boolean visibility
-	integer follower_count
-	integer[] followers FK
 }
 list_article {
 	serial list_id PK, FK
@@ -341,23 +332,21 @@ users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
 
-users }|--|{ tags : users_tag_ids_fkey
+articles ||--|{ article_version : article_article_version_id_fkey
+article_version ||--|{ article_block : article_version_article_block_id_fkey
+
 users |o--|{ lists : list_user_id_fkey
 
 users }o--o| publisher_user : publisher_user_user_id_fkey
 publisher_user }|--|{ publishers : publisher_user_publisher_id_fkey
 
-users }o--o{ articles : articles_users_id_fkey
-publishers |o--o{ articles : articles_publishers_id_fkey
+users }o--o{ articles : articles_users_ids_fkey
+publishers |o--o{ articles : articles_publisher_id_fkey
 
-users }o--o{ series: users_series_ids_fkey
-publishers }o--o{ series: publishers_series_ids_fkey
+users }o--o{ series: series_owner_id_fkey
+publishers }o--o{ series: series_owner_id_fkey
+articles }|--|| series : article_series_id_fkey
 
-series }|--|| articles : article_series_id_fkey
-
-articles ||--|{ article_version : article_article_version_id_fkey
-
-article_version ||--|{ article_block : article_version_article_block_id_fkey
-
+users }|--|{ tags : users_tag_ids_fkey
 articles }|--|{ tags : articles_tag_ids_fkey
 ```
