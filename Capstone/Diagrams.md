@@ -197,16 +197,21 @@ users {
 	
 	text image
 	varchar(255) bio
-
-	integer follower_count
-	integer following_count
 	
 	text[] urls
-	
+	integer follower_count
+	integer following_count
 	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
 	
 	timestampz created_at
 	timestampz last_modified
+}
+user_snapshot {
+	serial id PK
+	integer user_id FK
+	integer follower_count
+	integer following_count
+	timestampz created_at
 }
 sessions {
 	serial id PK
@@ -239,13 +244,20 @@ articles {
 	
 	text[] tag_ids FK
 	integer[] reference FK
-
-	integer like_count
-	integer comment_count
-	integer view_count
-
+	
 	timestampz created_at
 	timestampz last_modified
+}
+article_snapshot {
+	serial id PK
+	integer article_id FK
+	integer like_count
+	integer view_count
+	integer followed_view_count
+	integer unfollowed_view_count
+	integer share_count
+	integer reference_count
+	timestampz created_at
 }
 article_version {
 	bigint article_version_id PK
@@ -275,7 +287,6 @@ series {
 	text owner_id FK
 	text label
 	text image
-	integer follower_count
 	timestampz created_at
 	timestampz last_modified
 }
@@ -292,8 +303,6 @@ publishers {
 	text[] tag_ids
 	
 	varchar(255) bio
-	
-	integer follower_count
 	
 	timestampz created_at
 	timestampz last_modified
