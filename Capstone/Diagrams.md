@@ -255,6 +255,8 @@ article_snapshot {
 	integer view_count
 	integer followed_view_count
 	integer unfollowed_view_count
+	integer new_follower_count
+	integer profile_visits
 	integer share_count
 	integer reference_count
 	timestampz created_at
