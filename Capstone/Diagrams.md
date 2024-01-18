@@ -312,6 +312,19 @@ list_article {
 	integer article_id PK, FK
 	timestampz created_at
 }
+devices {
+	serial device_id
+	integer user_id
+	timestampz last_logged
+}
+activity_steam {
+	serial activity_stream_id  
+	integer user_id  
+	integer activity_type  
+	integer source_id  
+	  
+	integer time
+}
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
