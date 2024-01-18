@@ -320,9 +320,15 @@ list_article {
 activity_steam {
 	serial id PK
 	text summary
-	integer user_id
-	integer object_id
+	integer action_id FK
+	integer actor_id FK
+	integer object_id FK
+	integer target_id FK
 	timestampz date_created
+}
+action {
+	serial id
+	varchar(80) name
 }
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
@@ -352,6 +358,9 @@ follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 users }o--o{ publisher_user : publisher_user_user_id_fkey
 publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
+
+users }o--o{ activity_steam: activity_steam_actor_id
+activity_steam }|--|{ action: activity_steam_action_id
 
 users }|--|{ tags : users_tag_ids_fkey
 publishers }|--|{ tags : publishers_tag_ids_fkey
