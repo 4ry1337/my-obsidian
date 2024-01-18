@@ -253,7 +253,9 @@ users {
 
 	text[] urls
 
-	interests
+	text[] interests
+
+	integer[] articles FK
 
 	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
@@ -275,6 +277,8 @@ users ||--|{ accounts : ""
 
 articles {
 	bigint article_id PK
+	integer publisher_id FK
+	integer[] written_by FK
 	varchar article_name
 	varchar relative_path
 	bigint checksum
@@ -282,8 +286,10 @@ articles {
 	timestampz last_modified
 	integer series FK
 	real series_order
-	string[] tags FK
+	text[] tags FK
 }
+users }o--o{ articles : written_by
+
 article_version {
 	bigint article_version_id PK
 	bigint article_id FK
@@ -291,6 +297,7 @@ article_version {
 	bigint version_number
 	timestampz last_modified
 }
+articles ||--|{ article_version : article_article_version_
 article_block {
 	bigint block_id PK
 	bigint article_version_id FK
@@ -302,10 +309,13 @@ tags {
 	text label PK
 	int articleCount
 }
+articles }|--|{ tags : uses
+users }|--|{ tags : interests
 series {
 	serial id PK
-	string author FK
+	text owner FK
 	integer articles
 }
-articles }|--|| series
+series }|--|| articles : contains
+users }o--o{ series: owned_by
 ```
