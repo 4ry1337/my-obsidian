@@ -246,6 +246,9 @@ users {
 	
 	text image
 	varchar(255) bio
+
+	integer follower_count
+	integer following_count
 	
 	text[] urls
 	
@@ -265,8 +268,13 @@ verification_token {
 	text token UK "NOT NULL"
 	timestampz expires "NOT NULL"
 }
+follow {
+	integer follower_id PK, FK
+	integer following_id PK, FK
+	enum follow_type "User, Publisher, List, Series, Tags"
+}
 articles {
-	bigint article_id PK
+	serial article_id PK
 	
 	integer publisher_id FK
 	integer[] user_ids FK
@@ -279,6 +287,7 @@ articles {
 	bigint checksum
 	
 	text[] tag_ids FK
+	integer[] reference FK
 	
 	timestampz created_at
 	timestampz last_modified
@@ -337,7 +346,6 @@ lists {
 	text label
 	text image
 	boolean visibility
-	share
 	timestampz created_at
 	timestampz last_modified
 }
@@ -351,15 +359,16 @@ users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
 
+articles |o--o{ articles : articles_reference_fkey
 articles ||--|{ article_version : article_article_version_id_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 
 users |o--|{ lists : list_user_id_fkey
 lists }|--|{ list_article: list_article_list_id_fkey
-list_article }|--|{ articles: list_article_article_id_fkey 
+list_article }o--o{ articles: list_article_article_id_fkey 
 
-users }o--o| publisher_user : publisher_user_user_id_fkey
-publisher_user }|--|{ publishers : publisher_user_publisher_id_fkey
+users }o--o{ publisher_user : publisher_user_user_id_fkey
+publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 
 users }o--o{ articles : articles_users_ids_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
