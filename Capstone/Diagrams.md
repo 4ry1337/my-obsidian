@@ -264,6 +264,11 @@ Article {
 	timestamp last_modified
 	string[] tags FK
 }
+Article_Version {
+	bigint article_version_id PK
+	bigint article_id FK
+	
+}
 Tag {
 	string label
 	int articleCount
