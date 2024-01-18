@@ -322,7 +322,9 @@ publishers {
 	varchar(255) bio
 }
 publisher_user {
-	
+	integer user_id PK, FK "NOT NULL"
+	integer publisher_id PK, FK "NOT NULL"
+	enum role_id "Manager, "
 }
 
 users ||--|{ verification_token : ""
@@ -330,6 +332,7 @@ users ||--|{ sessions : ""
 users ||--|{ accounts : ""
 
 users }o--o{ articles : articles_users_id_fkey
+publishers |o--o{ articles : articles_publishers_id_fkey
 
 series }|--|| articles : article_series_id_fkey
 
@@ -338,6 +341,7 @@ articles ||--|{ article_version : article_article_version_id_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 
 users }o--o{ series: users_series_ids_fkey
+publishers }o--o{ series: publishers_series_ids_fkey
 
 articles }|--|{ tags : articles_tag_ids_fkey
 users }|--|{ tags : users_tag_ids_fkey
