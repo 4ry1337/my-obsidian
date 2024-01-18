@@ -239,10 +239,10 @@ accounts {
 }
 users {
 	serial id PK
+	varchar(255) username
 	varchar(255) name
 	varchar(255) email
 	timestampz emailVerified
-	
 	text image
 }
 sessions {
@@ -259,9 +259,7 @@ verification_token {
 users ||--|{ verification_token : ""
 users ||--|{ sessions : ""
 users ||--|{ accounts : ""
-profiles {
 
-}
 articles {
 	bigint article_id PK
 	varchar(255) article_name
