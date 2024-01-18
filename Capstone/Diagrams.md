@@ -242,7 +242,8 @@ users {
 	varchar(255) name
 	varchar(255) email
 	timestampz emailVerified
-	string image
+	
+	text image
 }
 sessions {
 	serial id PK
@@ -250,28 +251,34 @@ sessions {
 	varchar(255) sessionToken "NOT NULL"
 	integer userid FK "NOT NULL"
 }
-VerificationToken {
+verification_token {
 	text identifier "NOT NULL"
 	text token UK "NOT NULL"
 	timestampz expires "NOT NULL"
 }
-Article {
+users ||--|{ verification_token : ""
+users ||--|{ sessions : ""
+users ||--|{ accounts : ""
+profiles {
+
+}
+articles {
 	bigint article_id PK
-	varchar article_name
-	varchar relative_path
+	varchar(255) article_name
+	varchar(255) relative_path
 	bigint checksum
-	timestamp created_at
-	timestamp last_modified
+	timestampz created_at
+	timestampz last_modified
 	string[] tags FK
 }
-Article_Version {
+article_version {
 	bigint article_version_id PK
 	bigint article_id FK
 	string device_id "uuid"
 	bigint version_number
-	timestamp last_modified
+	timestampz last_modified
 }
-Article_Block {
+article_block {
 	bigint block_id PK
 	bigint article_version_id FK
 	bigint block_order
