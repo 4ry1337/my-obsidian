@@ -243,6 +243,7 @@ users {
 	varchar name
 	varchar email
 	timestampz emailVerified
+	approved boolean
 	text image
 	
 	integer follower_count
@@ -253,7 +254,7 @@ users {
 	text[] tag_ids FK
 	integer[] article_ids FK
 	integer[] series_ids FK
-	enum role "ADMIN, MANAGER, USER. default USER"
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
 	varchar(255) bio
 }
 sessions {
@@ -305,23 +306,25 @@ series {
 }
 publishers {
 	serial id PK
-	varchar username UK
 	varchar name
 	varchar email
+	approved boolean
 	timestampz emailVerified
 	text image
 	
 	integer follower_count
 	integer[] followers FK
-	integer following_count
-	integer[] following FK
+	
 	text[] urls
 	text[] tag_ids FK
 	integer[] article_ids FK
 	integer[] series_ids FK
-	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
 }
+publisher_user {
+	
+}
+
 users ||--|{ verification_token : ""
 users ||--|{ sessions : ""
 users ||--|{ accounts : ""
