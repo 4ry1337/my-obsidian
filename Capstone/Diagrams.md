@@ -239,7 +239,11 @@ articles {
 	
 	text[] tag_ids FK
 	integer[] reference FK
-	
+
+	integer like_count
+	integer comment_count
+	integer view_count
+
 	timestampz created_at
 	timestampz last_modified
 }
@@ -309,10 +313,6 @@ list_article {
 	integer article_id PK, FK
 	timestampz created_at
 }
-tags }|--|{ users : users_tag_ids_fkey
-tags }|--|{ publishers : publishers_tag_ids_fkey
-tags }|--|{ articles : articles_tag_ids_fkey
-
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
@@ -331,7 +331,7 @@ publishers }o--o{ series: series_owner_id_fkey
 series }|--|| articles : article_series_id_fkey
 
 users }o--o{ follow : follow_follower_id_fkey
-follow }o--o{ users : follow_following_id_type_users_fkey
+users }o--o{ follow : follow_following_id_type_users_fkey
 follow }o--o{ lists : follow_following_id_type_lists_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
@@ -339,4 +339,8 @@ follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 users }o--o{ publisher_user : publisher_user_user_id_fkey
 publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
+
+users }|--|{ tags : users_tag_ids_fkey
+publishers }|--|{ tags : publishers_tag_ids_fkey
+articles }|--|{ tags : articles_tag_ids_fkey
 ```
