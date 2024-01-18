@@ -245,18 +245,14 @@ users {
 	timestampz emailVerified
 	approved boolean
 	text image
+	varchar(255) bio
 	
 	integer follower_count
-	integer[] followers FK
 	integer following_count
-	integer[] following FK
+	
 	text[] urls
-	text[] tag_ids FK
-	integer[] list_ids FK
-	integer[] article_ids FK
-	integer[] series_ids FK
+	
 	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
-	varchar(255) bio
 }
 sessions {
 	serial id PK
@@ -344,8 +340,9 @@ list_article {
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
+
 users }|--|{ tags : users_tag_ids_fkey
-users |0--|{ lists : 
+users |o--|{ lists : list_user_id_fkey
 
 users }o--o| publisher_user : publisher_user_user_id_fkey
 publisher_user }|--|{ publishers : publisher_user_publisher_id_fkey
