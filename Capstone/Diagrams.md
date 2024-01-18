@@ -223,37 +223,37 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-Account {
-	string id PK  
-	string userId FK  
-	string type
-	string provider  
-	string providerAccountId  
-	string refresh_token  
-	string access_token  
-	int expires_at  
-	string token_type  
-	string scope  
-	string id_token  
-	string session_state
+accounts {
+	serial id PK "NOT NULL"  
+	integer userId FK "NOT NULL"
+	varchar(255) type "NOT NULL"
+	varchar(255) provider "NOT NULL"
+	varchar(255) providerAccountId
+	text refresh_token
+	text access_token 
+	bigint expires_at
+	text token_type
+	text scope
+	text id_token
+	text session_state
 }
-User {
-	string id PK
-	string name
-	string email
-	timestamp emailVerified
+users {
+	serial id PK
+	varchar(255) name
+	varchar(255) email
+	timestampz emailVerified
 	string image
 }
-Session {
-	string id PK
-	timestamp expires
-	string sessionToken
-	string userid FK
+sessions {
+	serial id PK
+	timestamp expires "NOT NULL"
+	varchar(255) sessionToken "NOT NULL"
+	integer userid FK "NOT NULL"
 }
 VerificationToken {
-	string identifier
-	string token UK
-	timestamp expires
+	text identifier "NOT NULL"
+	text token UK "NOT NULL"
+	timestampz expires "NOT NULL"
 }
 Article {
 	bigint article_id PK
@@ -267,7 +267,14 @@ Article {
 Article_Version {
 	bigint article_version_id PK
 	bigint article_id FK
-	
+	string device_id "uuid"
+	bigint version_number
+	timestamp last_modified
+}
+Article_Block {
+	bigint block_id PK
+	bigint article_version_id FK
+	bigint block_order
 }
 Tag {
 	string label
@@ -276,6 +283,5 @@ Tag {
 Series {
 	string id PK
 	string author FK
-	string[]
 }
 ```
