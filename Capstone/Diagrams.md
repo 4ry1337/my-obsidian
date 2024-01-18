@@ -253,7 +253,7 @@ users {
 
 	text[] urls
 
-	
+	interests
 
 	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
@@ -280,6 +280,8 @@ articles {
 	bigint checksum
 	timestampz created_at
 	timestampz last_modified
+	integer series FK
+	real series_order
 	string[] tags FK
 }
 article_version {
@@ -296,13 +298,14 @@ article_block {
 	enum block_type FK "NOT NULL; DEFAULT text"
 	text content
 }
-
-Tag {
-	string label
+tags {
+	text label PK
 	int articleCount
 }
-Series {
-	string id PK
+series {
+	serial id PK
 	string author FK
+	integer articles
 }
+articles }|--|| series
 ```
