@@ -222,7 +222,7 @@ verification_token {
 follow {
 	integer follower_id PK, FK "Always User"
 	integer following_id PK, FK
-	enum follow_type "User, Publisher, List, Series"
+	enum follow_type "User, Publisher, Series"
 }
 articles {
 	serial article_id PK
@@ -304,7 +304,6 @@ lists {
 	text label
 	text image
 	boolean visibility
-	integer follower_count
 	timestampz created_at
 	timestampz last_modified
 }
@@ -332,7 +331,6 @@ series }|--|| articles : article_series_id_fkey
 
 users }o--o{ follow : follow_follower_id_fkey
 users }o--o{ follow : follow_following_id_type_users_fkey
-follow }o--o{ lists : follow_following_id_type_lists_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 
