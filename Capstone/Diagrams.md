@@ -401,21 +401,18 @@ users |o--|{ lists : list_user_id_fkey
 lists }|--|{ list_article: list_article_list_id_fkey
 list_article }o--o{ articles: list_article_article_id_fkey
 
+users }o--o{ follow : follow_follower_id_fkey
+users }o--o{ follow : follow_following_id_type_users_fkey
+publishers }o--o{ follow : follow_following_id_type_publishers_fkey
+
+follow }o--o{ series : follow_following_id_type_series_fkey
 users }o--o{ series: series_owner_id_fkey
 publishers }o--o{ series: series_owner_id_fkey
 series }|--|| articles : article_series_id_fkey
 
-users }o--o{ follow : follow_follower_id_fkey
-users }o--o{ follow : follow_following_id_type_users_fkey
-follow }o--o{ series : follow_following_id_type_series_fkey
-follow }o--o{ publishers : follow_following_id_type_publishers_fkey
-
-users }o--o{ publisher_user : publisher_user_user_id_fkey
-publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
-publishers |o--o{ articles : articles_publisher_id_fkey
 
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
-publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
+publisher_snapshot }o--o{ publishers: publisher_snapshot_publisher_id_fkey
 ```
 
 users }|--|{ tags : users_tag_ids_fkey
