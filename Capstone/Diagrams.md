@@ -244,9 +244,9 @@ sessions }|--|| users : "Database session management"
 accounts }|--|| users : "saves tokens retrieved from the provider"
 
 users }o--o{ activity_stream: activity_steam_actor_id_fkey
-action }|--|{ activity_stream: activity_steam_action_id_fkey
+activity_stream }|--|{ action: activity_steam_action_id_fkey
 
-user_snapshot }o--o{ users : user_snapshot_user_id_fkey
+users }o--o{ user_snapshot : user_snapshot_user_id_fkey
 ```
 
 ```mermaid
@@ -416,8 +416,8 @@ publishers |o--o{ articles : articles_publisher_id_fkey
 
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
+```
 
 users }|--|{ tags : users_tag_ids_fkey
 publishers }|--|{ tags : publishers_tag_ids_fkey
 articles }|--|{ tags : articles_tag_ids_fkey
-```
