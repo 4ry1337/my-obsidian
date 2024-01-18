@@ -293,7 +293,10 @@ article_block {
 	bigint block_id PK
 	bigint article_version_id FK
 	bigint block_order
+	enum block_type FK "NOT NULL; DEFAULT text"
+	text content
 }
+
 Tag {
 	string label
 	int articleCount
