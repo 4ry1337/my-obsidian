@@ -356,10 +356,6 @@ action {
 	serial id
 	varchar(80) name
 }
-users ||--|{ verification_token : "Email/Passwordless login"
-users ||--|{ sessions : "Database session management"
-users ||--|{ accounts : "saves tokens retrieved from the provider"
-
 users ||--|{ device: device_user_id_fkey
 device ||--|| article_version: article_version_device_id_fkey
 
@@ -391,6 +387,10 @@ activity_stream }|--|{ action: activity_steam_action_id_fkey
 users }o--o{ user_snapshot: user_snapshot_user_id_fkey
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
+
+users ||--|{ verification_token : "Email/Passwordless login"
+users ||--|{ sessions : "Database session management"
+users ||--|{ accounts : "saves tokens retrieved from the provider"
 
 users }|--|{ tags : users_tag_ids_fkey
 publishers }|--|{ tags : publishers_tag_ids_fkey
