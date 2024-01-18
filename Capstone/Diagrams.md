@@ -398,30 +398,27 @@ articles }|--|{ tags : articles_tag_ids_fkey
 ```
 
 ```mermaid
-sequenceDiagram
-	participant User1
-	participant User2
-	participant CRDT
-	participant Article
-	User1->>CRDT: Create Article
-	CRDT->>Article: Create Article
-	User1->>CRDT: Write "Introduction"
-	CRDT->>Article: Apply Edit "Introduction"
-	User2->>CRDT: Join Article
-	CRDT->>Article: Fetch Latest State
-	Article->>User2: Send Latest State
-	User2->>CRDT: Write "Body Paragraph 1"
-	CRDT->>Article: Apply Edit "Body Paragraph 1"
-	User1->>CRDT: Fetch Updates
-	CRDT->>Article: Get Updates
-	Article->>User1: Send Updates "Body Paragraph 1"
-	User1->>CRDT: Apply Updates
-	User1->>CRDT: Write "Body Paragraph 2"
-	CRDT->>Article: Apply Edit "Body Paragraph 2"
-	User2->>CRDT: Fetch Updates
-	CRDT->>Article: Get Updates
-	Article->>User2: Send Updates "Body Paragraph 2"
-	User2->>CRDT: Apply Updates
-	User1->>CRDT: Publish Article
-	CRDT->>Article: Mark as Published
+graph TD;
+  subgraph User1
+    A((User 1 Edits))
+    B((User 1 Saves))
+    C((User 1 Sends Changes))
+  end
+
+  subgraph User2
+    D((User 2 Edits))
+    E((User 2 Saves))
+    F((User 2 Sends Changes))
+  end
+
+  subgraph CRDT Algorithm
+    G((Merge Changes))
+  end
+
+  subgraph Article
+    H(Article Content)
+  end
+
+  A --> B --> C -->|Real-time Sync| G
+  D --> E --> F --> G -->|Update| H
 ```
