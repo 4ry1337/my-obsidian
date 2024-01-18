@@ -408,15 +408,16 @@ sequenceDiagram
     User->>Service: opens a website
     activate Service
     Service->>Cache: post request for articles
-    activate cache
+    activate Cache
     Cache-->>Service: array of articles
-    deactivate Redis
+    deactivate Cache
     Service-->>User: shows articles
     deactivate Service
 
     alt article is open LESS than 100 sec
         User->>Service: opens an article
         activate Service
+        
         Service->>Service: view_count
         activate Service
         deactivate Service
@@ -437,19 +438,19 @@ sequenceDiagram
 
     User->>Service: likes an article
     activate Service
-    Service->>ArticleDa: like_count +1
-    activate PostgreSQL
-    PostgreSQL-->>Service: success
-    deactivate PostgreSQL
+    Service->>ArticleDatabase: like_count +1
+    activate ArticleDatabase
+    ArticleDatabase-->>Service: success
+    deactivate ArticleDatabase
     Service-->>User: shows in UI
     deactivate Service
 
     User->>Service: send a comment
     activate Service
-    Service->>PostgreSQL: add comment
-    activate PostgreSQL
-    PostgreSQL-->>Service: success
-    deactivate PostgreSQL
+    Service->>ArticleDatabase: add comment
+    activate ArticleDatabase
+    ArticleDatabase-->>Service: success
+    deactivate ArticleDatabase
     Service-->>User: shows in UI
     deactivate Service
 ```
