@@ -398,27 +398,58 @@ articles }|--|{ tags : articles_tag_ids_fkey
 ```
 
 ```mermaid
-graph TD;
-  subgraph User1
-    A((User 1 Edits))
-    B((User 1 Saves))
-    C((User 1 Sends Changes))
-  end
+sequenceDiagram
+    participant User
+    participant Service
+    participant Cache
+    participant GraphDatabase
+    participant ArticleDatabase
 
-  subgraph User2
-    D((User 2 Edits))
-    E((User 2 Saves))
-    F((User 2 Sends Changes))
-  end
+    User->>Service: opens a website
+    activate Service
+    Service->>Cache: post request for articles
+    activate cache
+    Cache-->>Service: array of articles
+    deactivate Redis
+    Service-->>User: shows articles
+    deactivate Service
 
-  subgraph CRDT Algorithm
-    G((Merge Changes))
-  end
+    alt article is open LESS than 100 sec
+        User->>Service: opens an article
+        activate Service
+        Service->>Service: view_count
+        activate Service
+        deactivate Service
+        User->>Service: closes the article
+        deactivate Service
+    else article is open MORE than 100 sec
+        User->>Service: opens an article
+        activate Service
+        Service->>Service: view_count
+        activate Service
+        deactivate Service
+        Service->>GraphDatabase: view_count +1
+        activate GraphDatabase
+        GraphDatabase-->>Service: success
+        deactivate GraphDatabase
+        deactivate Service
+    end
 
-  subgraph Article
-    H(Article Content)
-  end
+    User->>Service: likes an article
+    activate Service
+    Service->>ArticleDa: like_count +1
+    activate PostgreSQL
+    PostgreSQL-->>Service: success
+    deactivate PostgreSQL
+    Service-->>User: shows in UI
+    deactivate Service
 
-  A --> B --> C -->|Real-time Sync| G
-  D --> E --> F --> G -->|Update| H
+    User->>Service: send a comment
+    activate Service
+    Service->>PostgreSQL: add comment
+    activate PostgreSQL
+    PostgreSQL-->>Service: success
+    deactivate PostgreSQL
+    Service-->>User: shows in UI
+    deactivate Service
 ```
