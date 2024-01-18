@@ -324,13 +324,15 @@ publishers {
 publisher_user {
 	integer user_id PK, FK "NOT NULL"
 	integer publisher_id PK, FK "NOT NULL"
-	enum role_id "Manager, "
+	enum role_id "Writer Manager, Article Manager, Ad Manager"
 }
 
-users ||--|{ verification_token : ""
-users ||--|{ sessions : ""
-users ||--|{ accounts : ""
+users ||--|{ verification_token : "Email/Passwordless login"
+users ||--|{ sessions : "Database session management"
+users ||--|{ accounts : "#User management"
 
+users }o--o| publisher_user : publisher_user_user_id_fkey
+publishers ||--o{ publisher_user : publisher_user_publisher_id_fkey
 users }o--o{ articles : articles_users_id_fkey
 publishers |o--o{ articles : articles_publishers_id_fkey
 
@@ -345,6 +347,4 @@ publishers }o--o{ series: publishers_series_ids_fkey
 
 articles }|--|{ tags : articles_tag_ids_fkey
 users }|--|{ tags : users_tag_ids_fkey
-
-
 ```
