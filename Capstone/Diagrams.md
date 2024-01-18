@@ -240,12 +240,18 @@ accounts {
 
 users {
 	serial id PK
-	varchar(255) name
+	varchar username UK
+	varchar name
 	varchar(255) email
 	timestampz emailVerified
 	text image
-
 	
+	integer follower_count
+	integer[] followers FK
+	integer following_count
+	integer[] following FK
+
+	text contact_info
 
 	enum role "ADMIN, MANAGER, USER. default USER"
 	varchar(255) bio
