@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Diagrams.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -128,14 +128,15 @@
             }
           },
           {
-            "id": "ac6743b1653cf36e",
+            "id": "64692f256c08be82",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
