@@ -252,6 +252,7 @@ users {
 	integer[] following FK
 	text[] urls
 	text[] tag_ids FK
+	integer[] list_ids FK
 	integer[] article_ids FK
 	integer[] series_ids FK
 	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
@@ -326,15 +327,34 @@ publisher_user {
 	integer publisher_id PK, FK "NOT NULL"
 	enum role_id "Writer Manager, Article Manager, Ad Manager"
 }
+list {
+	serial list_id PK
+	integer user_id FK
+	text label
+	boolean visibility
+	integer follower_count
+	integer[] followers FK
+}
+list_article {
+	serial list_id PK, FK
+	integer article_id PK, FK
+	timestampz created_at
+}
 
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
-users ||--|{ accounts : "#User management"
+users ||--|{ accounts : "saves tokens retrieved from the provider"
+users }|--|{ tags : users_tag_ids_fkey
+users |0--|{ lists : 
 
 users }o--o| publisher_user : publisher_user_user_id_fkey
-publishers ||--o{ publisher_user : publisher_user_publisher_id_fkey
+publisher_user }|--|{ publishers : publisher_user_publisher_id_fkey
+
 users }o--o{ articles : articles_users_id_fkey
 publishers |o--o{ articles : articles_publishers_id_fkey
+
+users }o--o{ series: users_series_ids_fkey
+publishers }o--o{ series: publishers_series_ids_fkey
 
 series }|--|| articles : article_series_id_fkey
 
@@ -342,9 +362,5 @@ articles ||--|{ article_version : article_article_version_id_fkey
 
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 
-users }o--o{ series: users_series_ids_fkey
-publishers }o--o{ series: publishers_series_ids_fkey
-
 articles }|--|{ tags : articles_tag_ids_fkey
-users }|--|{ tags : users_tag_ids_fkey
 ```
