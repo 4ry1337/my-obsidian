@@ -250,6 +250,9 @@ users {
 	text[] urls
 	
 	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
 }
 sessions {
 	serial id PK
@@ -264,16 +267,21 @@ verification_token {
 }
 articles {
 	bigint article_id PK
+	
 	integer publisher_id FK
 	integer[] user_ids FK
+	
+	integer series_id FK
+	integer series_order
+	
 	varchar article_name
 	varchar relative_path
 	bigint checksum
+	
+	text[] tag_ids FK
+	
 	timestampz created_at
 	timestampz last_modified
-	integer series_id FK
-	real series_order
-	text[] tag_ids FK
 }
 article_version {
 	bigint article_version_id PK
@@ -297,9 +305,13 @@ series {
 	serial series_id PK
 	text owner_id FK
 	text label
+	text image
+	timestampz created_at
+	timestampz last_modified
 }
 publishers {
 	serial id PK
+	
 	varchar name
 	varchar email
 	approved boolean
@@ -310,17 +322,24 @@ publishers {
 	text[] tag_ids
 	
 	varchar(255) bio
+	
+	timestampz created_at
+	timestampz last_modified
 }
 publisher_user {
 	integer user_id PK, FK "NOT NULL"
 	integer publisher_id PK, FK "NOT NULL"
-	enum role_id "Writer Manager, Article Manager, Ad Manager"
+	enum role_id "Manager, Writer Manager, Article Manager, Ad Manager"
 }
 lists {
 	serial list_id PK
 	integer user_id FK
 	text label
+	text image
 	boolean visibility
+	share
+	timestampz created_at
+	timestampz last_modified
 }
 list_article {
 	serial list_id PK, FK
@@ -336,6 +355,8 @@ articles ||--|{ article_version : article_article_version_id_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 
 users |o--|{ lists : list_user_id_fkey
+lists }|--|{ list_article: list_article_list_id_fkey
+list_article }|--|{ articles: list_article_article_id_fkey 
 
 users }o--o| publisher_user : publisher_user_user_id_fkey
 publisher_user }|--|{ publishers : publisher_user_publisher_id_fkey

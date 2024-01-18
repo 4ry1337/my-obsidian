@@ -18,6 +18,18 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "f8de1809e2c13f24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
         ]
       }
@@ -155,8 +167,24 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Capstone/Capstone Project.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database types/Codd's 12 rules.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/images/Window Functions.png",
+    "Computing/Sub-disciplines/Database Management Systems/Database Scalability.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Schema.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Design.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Management Systems.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/Structured Query Language.md",
+    "Computing/Sub-disciplines/Database Management Systems/DBMS types/Relational Database Management System.md",
     "Capstone/Diagrams.md",
+    "Capstone/Capstone Project.md",
     "Rust/Rust - User-defined Types.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20231217195136.png",
@@ -173,26 +201,11 @@
     "Rust/Rust - Ownership.md",
     "Rust/Rust - Slice Type.md",
     "Rust/Rust Programming Language.md",
-    "Rust/Rust - Control Flow.md",
-    "Rust/Variables and Mutability.md",
     "Rust/Pasted image 20240111150142.png",
-    "Rust/Rust - References and Borrowing.md",
-    "Computing/Computer/Computer Programming/Dangling Reference.md",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",
-    "Rust/Pasted image 20231226112431.png",
-    "Rust/Rust - Functions.md",
-    "Rust/Rust - Cargo.md",
-    "Computing/Sub-disciplines/Computer Science/Algorithm/Algorithm.md",
     "Capstone/Orta.mind",
-    "Computing/Computer/Computer Programming/Memory Management.md",
-    "Computing/Computer/Computer Programming/Resource Management.md",
-    "_Notes/_Tasks.md",
-    "_Notes/_Ideas.md",
-    "Computing/Computer/Computer Software/Operating System/Operating System.md",
-    "Computing/Computer/Computer Software/Computer Software.md",
     "Computing/Computer/Computer Software/Operating System",
-    "Capstone/Pasted image 20231217194900.png.md",
     "Computing/Sub-disciplines",
     "Computing/Computer/Computer Hardware",
     "Computing/Computer",
