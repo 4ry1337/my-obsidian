@@ -318,13 +318,14 @@ list_article {
 	timestampz created_at
 }
 activity_steam {
-	serial activity_stream_id  
-	integer subject_id
-	integer object_id  
-	integer type  
-	integer activity
-	text data  
-	integer time
+	serial id PK
+	integer user_id
+	tinyint action_id
+	tinyint object_id
+	datetime date_created
+}
+action {
+	
 }
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
