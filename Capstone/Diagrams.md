@@ -250,9 +250,14 @@ articles {
 article_version {
 	bigint article_version_id PK
 	bigint article_id FK
-	string device_id "uuid"
+	text device_id FK
 	bigint version_number
 	timestampz last_modified
+}
+device {
+	text device_id PK "uuid"
+	integer user_id FK
+	timestampz last_logged_in_at
 }
 article_block {
 	bigint block_id PK
@@ -312,22 +317,21 @@ list_article {
 	integer article_id PK, FK
 	timestampz created_at
 }
-devices {
-	serial device_id
-	integer user_id
-	timestampz last_logged
-}
 activity_steam {
 	serial activity_stream_id  
-	integer user_id  
-	integer activity_type  
-	integer source_id  
-	  
+	integer subject_id
+	integer object_id  
+	integer type  
+	integer activity
+	text data  
 	integer time
 }
 users ||--|{ verification_token : "Email/Passwordless login"
 users ||--|{ sessions : "Database session management"
 users ||--|{ accounts : "saves tokens retrieved from the provider"
+
+users ||--|{ device: device_user_id_fkey
+device ||--|| article_version: article_version_device_id_fkey
 
 users }o--o{ articles : articles_users_ids_fkey
 articles |o--o{ articles : articles_reference_fkey
