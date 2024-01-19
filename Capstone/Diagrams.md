@@ -222,16 +222,6 @@ sessions {
 	varchar sessionToken "NOT NULL"
 	integer userid FK "NOT NULL"
 }
-verification_token {
-	text identifier "NOT NULL"
-	text token UK "NOT NULL"
-	timestampz expires "NOT NULL"
-}
-follow {
-	integer follower_id PK, FK "Always User"
-	integer following_id PK, FK
-	enum follow_type "User, Publisher, Series"
-}
 articles {
 	serial article_id PK
 	
@@ -356,14 +346,7 @@ action {
 	serial id
 	varchar(80) name
 }
-comment {
-	integer owner_id PK, FK
-	integer target_id PK, FK
-	text content
-	integer like_count
-}
 accounts }|--|| users : "saves tokens retrieved from the provider"
-verification_token }|--|| users : "Email/Passwordless login"
 sessions }|--|| users : "Database session management"
 user_snapshot }o--o{ users : user_snapshot_user_id_fkey
 action }|--|{ activity_stream: activity_steam_action_id_fkey
@@ -392,15 +375,121 @@ articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 articles }|--|{ tags : articles_tag_ids_fkey
 ```
 
+```mermaid
+erDiagram
+follow {
+	integer follower_id PK, FK "Always User"
+	integer following_id PK, FK
+	enum follow_type "User, Publisher, Series"
+}
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
+
+series {
+	serial series_id PK
+	text owner_id FK
+	text label
+	text image
+	timestampz created_at
+	timestampz last_modified
+}
+publishers {
+	serial id PK
+	
+	varchar name
+	varchar email
+	approved boolean
+	timestampz emailVerified
+	text image
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	varchar(255) bio
+	
+	timestampz created_at
+	timestampz last_modified
+}
+
 users }o--o{ follow : follow_follower_id_fkey
 users }o--o{ follow : follow_following_id_type_users_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
+```
+```mermaid
+erDiagram
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
 
-comment }o--o{ articles : comment_target_id_fkey
-series }o--o{ comment : comment_target_id_fkey
+comment {
+	integer owner_id PK, FK
+	integer target_id PK, FK
+	text content
+	integer like_count
+}
+lists {
+	serial list_id PK
+	integer user_id FK
+	text label
+	text image
+	boolean visibility
+	timestampz created_at
+	timestampz last_modified
+}
+series {
+	serial series_id PK
+	text owner_id FK
+	text label
+	text image
+	timestampz created_at
+	timestampz last_modified
+}
+
 lists }o--o{ comment : comment_target_id_fkey
-
+series }o--o{ comment : comment_target_id_fkey
+articles }o--o{ comment : comment_target_id_fkey
+```
 ```mermaid
 sequenceDiagram
     participant User
