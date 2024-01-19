@@ -183,16 +183,15 @@ user_snapshot }o--o{ users : uses
 users ||--|{ device: "used by"
 users }o--o{ articles : writers
 users |o--|{ lists : contains
+users }o--o{ comment : comment
 users }o--o{ series: has
-users }o--o{ publisher_user : member
 users }o--o{ follow : follower
 users }o--o{ follow : following
+users }o--o{ publisher_user : member
 users }|--|{ tags : uses
-users }o--o{ comment : comment
 
 device ||--|| article_version: used
 
-articles ||--|{ article_version : uses
 articles }o--o{ article_snapshot: uses 
 articles }|--|{ tags : uses
 articles |o--o{ articles : "citation with system"
@@ -200,18 +199,18 @@ articles |o--o{ articles : "citation with system"
 lists }|--|{ list_article: contains
 list_article }o--o{ articles: contains
 
+comment }o--o{ lists : comment
+comment }o--o{ articles : comment
+comment }o--o{ series : comment
+
 series }|--|| articles : contains
 
+follow }o--o{ series : subscribe
 follow }o--o{ publishers : subscribe
 publisher_user }o--o{ publishers : member
 
-follow }o--o{ series : subscribe
-
-comment }o--o{ lists : comment
-comment }o--o{ series : comment
-comment }o--o{ articles : comment
-
 article_version ||--|{ article_block : constructed
+article_version }|--|| articles : uses
 
 publishers }o--o{ series: has
 publishers |o--o{ articles : publishes
