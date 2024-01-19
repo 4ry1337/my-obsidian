@@ -246,12 +246,19 @@ articles {
 	
 	integer like_count
 	integer comment_count
-	
+
+	integer category_id
 	text[] tag_ids FK
 	integer[] reference FK
 	
 	timestampz created_at
 	timestampz last_modified
+}
+category {
+	serial category_id PK
+	label name
+	integer parent_id FK "NULL"
+	bigint article_count
 }
 article_snapshot {
 	serial id PK
@@ -307,7 +314,6 @@ publishers {
 	text image
 	
 	text[] urls
-	text[] tag_ids
 	
 	integer follower_count
 	integer following_count
@@ -356,17 +362,18 @@ action {
 	serial id
 	varchar(80) name
 }
-verification_token }|--|| users : "Email/Passwordless login"
 sessions }|--|| users : "Database session management"
 accounts }|--|| users : "saves tokens retrieved from the provider"
+action }|--|{ activity_stream: activity_steam_action_id_fkey
+activity_stream }o--o{ users: activity_steam_actor_id_fkey
 
 users ||--|{ device: device_user_id_fkey
 device ||--|| article_version: article_version_device_id_fkey
 
 users }o--o{ articles : articles_users_ids_fkey
 articles |o--o{ articles : articles_reference_fkey
-articles ||--|{ article_version : article_version_article_id_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
+article_version }|--|| articles : article_version_article_id_fkey
 
 users |o--|{ lists : list_user_id_fkey
 lists }|--|{ list_article: list_article_list_id_fkey
@@ -376,24 +383,19 @@ users }o--o{ series: series_owner_id_fkey
 publishers }o--o{ series: series_owner_id_fkey
 series }|--|| articles : article_series_id_fkey
 
-users }o--o{ follow : follow_follower_id_fkey
-users }o--o{ follow : follow_following_id_type_users_fkey
+follow }o--o{ users : follow_follower_id_fkey
+follow }o--o{ users : follow_following_id_type_users_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 
-users }o--o{ publisher_user : publisher_user_user_id_fkey
+publisher_user }o--o{ users : publisher_user_user_id_fkey
 publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
-
-activity_stream }o--o{ users: activity_steam_actor_id_fkey
-action }|--|{ activity_stream: activity_steam_action_id_fkey
 
 user_snapshot }o--o{ users : user_snapshot_user_id_fkey
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
 
-users }|--|{ tags : users_tag_ids_fkey
-publishers }|--|{ tags : publishers_tag_ids_fkey
 articles }|--|{ tags : articles_tag_ids_fkey
 ```
 
