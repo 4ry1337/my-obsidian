@@ -174,45 +174,46 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-verification_token }|--|| users : "Email/Passwordless login"
 sessions }|--|| users : "Database session management"
 accounts }|--|| users : "saves tokens retrieved from the provider"
+user_snapshot }o--o{ users : uses
 
-users ||--|{ device: used by
-device ||--|| article_version: used
-
+users ||--|{ device: "used by"
 users }o--o{ articles : writers
-articles |o--o{ articles : citation with system
+articles |o--o{ articles : "citation with system"
 articles ||--|{ article_version : uses
 article_version ||--|{ article_block : constructed
 
 users |o--|{ lists : contains
 lists }|--|{ list_article: contains
-list_article }o--o{ articles: list_article_article_id_fkey
+list_article }o--o{ articles: contains
 
-users }o--o{ series: series_owner_id_fkey
-publishers }o--o{ series: series_owner_id_fkey
-series }|--|| articles : article_series_id_fkey
+users }o--o{ series: has
+publishers }o--o{ series: has
+series }|--|| articles : contains
 
-users }o--o{ follow : follow_follower_id_fkey
-users }o--o{ follow : follow_following_id_type_users_fkey
-follow }o--o{ series : follow_following_id_type_series_fkey
-follow }o--o{ publishers : follow_following_id_type_publishers_fkey
+users }o--o{ follow : subscribe
+users }o--o{ follow : subscribe
+follow }o--o{ series : subscribe
+follow }o--o{ publishers : subscribe
 
-users }o--o{ publisher_user : publisher_user_user_id_fkey
-publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
-publishers |o--o{ articles : articles_publisher_id_fkey
+users }o--o{ publisher_user : member
+publisher_user }o--o{ publishers : member
+publishers |o--o{ articles : publishes
+publishers }|--|{ tags : uses
 
-activity_stream }o--o{ users: activity_steam_actor_id_fkey
-action }|--|{ activity_stream: activity_steam_action_id_fkey
+activity_stream }o--o{ users: stores
+action }|--|{ activity_stream: uses
 
-user_snapshot }o--o{ users : user_snapshot_user_id_fkey
-articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
-publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
+device ||--|| article_version: used
+articles }|--|{ tags : uses
+articles }o--o{ article_snapshot: uses 
+publishers }o--o{ publisher_snapshot: uses
 
-users }|--|{ tags : users_tag_ids_fkey
-publishers }|--|{ tags : publishers_tag_ids_fkey
-articles }|--|{ tags : articles_tag_ids_fkey
+users }o--o{ comment : comment
+series }o--o{ comment : comment
+lists }o--o{ comment : comment
+articles }o--o{ comment : comment
 ```
 ## Main
 ```mermaid
