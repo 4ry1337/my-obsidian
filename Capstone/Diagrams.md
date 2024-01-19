@@ -775,6 +775,7 @@ publishers }o--o{ activity_stream : activity_steam_actor_id_fkey
 activity_stream }o--o{ articles : activity_steam_target_id_fkey
 activity_stream }o--o{ series : activity_steam_target_id_fkey
 activity_stream }o--o{ lists : activity_steam_target_id_fkey
+activity_stream }o--o{ comment : activity_steam_target_id_fkey
 ```
 # Sequence
 ```mermaid
