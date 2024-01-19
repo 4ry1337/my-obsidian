@@ -172,6 +172,48 @@ flowchart TD
 	promoetheus --> grafana
 ```
 # Models
+```mermaid
+erDiagram
+verification_token }|--|| users : "Email/Passwordless login"
+sessions }|--|| users : "Database session management"
+accounts }|--|| users : "saves tokens retrieved from the provider"
+
+users ||--|{ device: used by
+device ||--|| article_version: used
+
+users }o--o{ articles : writers
+articles |o--o{ articles : citation with system
+articles ||--|{ article_version : uses
+article_version ||--|{ article_block : constructed
+
+users |o--|{ lists : contains
+lists }|--|{ list_article: contains
+list_article }o--o{ articles: list_article_article_id_fkey
+
+users }o--o{ series: series_owner_id_fkey
+publishers }o--o{ series: series_owner_id_fkey
+series }|--|| articles : article_series_id_fkey
+
+users }o--o{ follow : follow_follower_id_fkey
+users }o--o{ follow : follow_following_id_type_users_fkey
+follow }o--o{ series : follow_following_id_type_series_fkey
+follow }o--o{ publishers : follow_following_id_type_publishers_fkey
+
+users }o--o{ publisher_user : publisher_user_user_id_fkey
+publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
+publishers |o--o{ articles : articles_publisher_id_fkey
+
+activity_stream }o--o{ users: activity_steam_actor_id_fkey
+action }|--|{ activity_stream: activity_steam_action_id_fkey
+
+user_snapshot }o--o{ users : user_snapshot_user_id_fkey
+articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
+publishers }o--o{ publisher_snapshot: publisher_snapshot_publisher_id_fkey
+
+users }|--|{ tags : users_tag_ids_fkey
+publishers }|--|{ tags : publishers_tag_ids_fkey
+articles }|--|{ tags : articles_tag_ids_fkey
+```
 ## Main
 ```mermaid
 erDiagram
@@ -440,14 +482,8 @@ users }|--|{ tags : user_tag_ids_fkey
 publishers }|--|{ tags : publisher_tag_ids_fkey
 ```
 ## Social Interactions
-### Following
 ```mermaid
 erDiagram
-follow {
-	integer follower_id PK, FK "Always User"
-	integer following_id PK, FK
-	enum follow_type "User, Publisher, Series"
-}
 users {
 	serial id PK
 	varchar name
@@ -469,7 +505,6 @@ users {
 	timestampz created_at
 	timestampz last_modified
 }
-
 series {
 	serial series_id PK
 	text owner_id FK
@@ -497,17 +532,6 @@ publishers {
 	
 	timestampz created_at
 	timestampz last_modified
-}
-
-users }o--o{ follow : follow_follower_id_fkey
-users }o--o{ follow : follow_following_id_type_users_fkey
-follow }o--o{ series : follow_following_id_type_series_fkey
-follow }o--o{ publishers : follow_following_id_type_publishers_fkey
-comment {
-	integer owner_id PK, FK
-	integer target_id PK, FK
-	text content
-	integer like_count
 }
 lists {
 	serial list_id PK
@@ -539,11 +563,26 @@ articles {
 	timestampz created_at
 	timestampz last_modified
 }
-
+follow {
+	integer follower_id PK, FK "Always User"
+	integer following_id PK, FK
+	enum follow_type "User, Publisher, Series"
+}
+comment {
+	integer owner_id PK, FK
+	integer target_id PK, FK
+	text content
+	integer like_count
+	enum comment_type "List, Series, Article"
+}
+users }o--o{ follow : follow_follower_id_fkey
+users }o--o{ follow : follow_following_id_type_users_fkey
+follow }o--o{ series : follow_following_id_type_series_fkey
+publishers }o--o{ follow : follow_following_id_type_publishers_fkey
 users }o--o{ comment : comment_owner_id_fkey
-lists }o--o{ comment: comment_target_id_fkey
 series }o--o{ comment : comment_target_id_fkey
-articles }o--o{ comment: comment_target_id_fkey
+comment }o--o{ lists : comment_target_id_fkey
+comment }o--o{ articles: comment_target_id_fkey
 ```
 ## Analysis
 ```mermaid
