@@ -174,20 +174,6 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
-accounts {
-	serial id PK "NOT NULL"  
-	integer userId FK "NOT NULL"
-	varchar type "NOT NULL"
-	varchar provider "NOT NULL"
-	varchar providerAccountId
-	text refresh_token
-	text access_token 
-	bigint expires_at
-	text token_type
-	text scope
-	text id_token
-	text session_state
-}
 users {
 	serial id PK
 	varchar name
@@ -215,12 +201,6 @@ user_snapshot {
 	integer follower_count
 	integer following_count
 	timestampz created_at
-}
-sessions {
-	serial id PK
-	timestamp expires "NOT NULL"
-	varchar sessionToken "NOT NULL"
-	integer userid FK "NOT NULL"
 }
 articles {
 	serial article_id PK
@@ -275,10 +255,6 @@ article_block {
 	enum block_type FK "NOT NULL; DEFAULT text"
 	text content
 }
-tags {
-	text label PK
-	integer article_count
-}
 series {
 	serial series_id PK
 	text owner_id FK
@@ -317,7 +293,7 @@ publisher_snapshot {
 publisher_user {
 	integer user_id PK, FK "NOT NULL"
 	integer publisher_id PK, FK "NOT NULL"
-	enum role_id "Manager, Writer Manager, Article Manager, Ad Manager"
+	enum role_id
 }
 lists {
 	serial list_id PK
@@ -346,8 +322,6 @@ action {
 	serial id
 	varchar(80) name
 }
-accounts }|--|| users : "saves tokens retrieved from the provider"
-sessions }|--|| users : "Database session management"
 user_snapshot }o--o{ users : user_snapshot_user_id_fkey
 action }|--|{ activity_stream: activity_steam_action_id_fkey
 activity_stream }o--o{ users: activity_steam_actor_id_fkey
@@ -358,21 +332,140 @@ users }o--o{ articles : articles_users_ids_fkey
 users |o--|{ lists : list_user_id_fkey
 lists }|--|{ list_article: list_article_list_id_fkey
 list_article }o--o{ articles: list_article_article_id_fkey
-users }o--o{ series: series_owner_id_fkey
 
-publishers }o--o{ publisher_user : publisher_user_publisher_id_fkey
 users }o--o{ publisher_user : publisher_user_user_id_fkey
+publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 
-publisher_snapshot }o--o{ publishers : publisher_snapshot_publisher_id_fkey
-publishers }o--o{ series: series_owner_id_fkey
+publishers }o--o{ publisher_snapshot : publisher_snapshot_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
 
+users }o--o{ series: series_owner_id_fkey
+publishers }o--o{ series: series_owner_id_fkey
 series }|--|| articles : article_series_id_fkey
 articles |o--o{ articles : articles_reference_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 article_version }|--|| articles : article_version_article_id_fkey
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
-articles }|--|{ tags : articles_tag_ids_fkey
+```
+
+```mermaid
+erDiagram
+accounts {
+	serial id PK "NOT NULL"  
+	integer userId FK "NOT NULL"
+	varchar type "NOT NULL"
+	varchar provider "NOT NULL"
+	varchar providerAccountId
+	text refresh_token
+	text access_token 
+	bigint expires_at
+	text token_type
+	text scope
+	text id_token
+	text session_state
+}
+sessions {
+	serial id PK
+	timestamp expires "NOT NULL"
+	varchar sessionToken "NOT NULL"
+	integer userid FK "NOT NULL"
+}
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
+accounts }|--|| users : "saves tokens retrieved from the provider"
+sessions }|--|| users : "Database session management"
+```
+
+```mermaid
+erDiagram
+publishers {
+	serial id PK
+	
+	varchar name
+	varchar email
+	approved boolean
+	timestampz emailVerified
+	text image
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	varchar(255) bio
+	
+	timestampz created_at
+	timestampz last_modified
+}
+articles {
+	serial article_id PK
+	
+	integer publisher_id FK
+	integer[] user_ids FK
+	
+	integer series_id FK
+	integer series_order
+	
+	varchar article_name
+	varchar relative_path
+	bigint checksum
+	
+	integer like_count
+	integer comment_count
+	text[] tag_ids FK
+	integer[] reference FK
+	
+	timestampz created_at
+	timestampz last_modified
+}
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
+tags {
+	text label PK
+	integer article_count
+}
+articles }|--|{ tags : article_tag_ids_fkey
+users }|--|{ tags : user_tag_ids_fkey
+publishers }|--|{ tags : publisher_tag_ids_fkey
 ```
 
 ```mermaid
@@ -438,6 +531,7 @@ users }o--o{ follow : follow_following_id_type_users_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 ```
+
 ```mermaid
 erDiagram
 users {
@@ -461,7 +555,6 @@ users {
 	timestampz created_at
 	timestampz last_modified
 }
-
 comment {
 	integer owner_id PK, FK
 	integer target_id PK, FK
@@ -485,11 +578,80 @@ series {
 	timestampz created_at
 	timestampz last_modified
 }
+articles {
+	serial article_id PK
+	
+	integer publisher_id FK
+	integer[] user_ids FK
+	
+	integer series_id FK
+	integer series_order
+	
+	varchar article_name
+	varchar relative_path
+	bigint checksum
+	
+	integer like_count
+	integer comment_count
+	text[] tag_ids FK
+	integer[] reference FK
+	
+	timestampz created_at
+	timestampz last_modified
+}
 
-lists }o--o{ comment : comment_target_id_fkey
-series }o--o{ comment : comment_target_id_fkey
-articles }o--o{ comment : comment_target_id_fkey
+users }o--o{ comment : comment_owner_id_fkey
+comment }o--o{ lists : comment_target_id_fkey
+comment }o--o{ series : comment_target_id_fkey
+comment }o--o{ articles : comment_target_id_fkey
 ```
+
+```mermaid
+erDiagram
+publishers {
+	serial id PK
+	
+	varchar name
+	varchar email
+	approved boolean
+	timestampz emailVerified
+	text image
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	varchar(255) bio
+	
+	timestampz created_at
+	timestampz last_modified
+}
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
+
+```
+
 ```mermaid
 sequenceDiagram
     participant User
