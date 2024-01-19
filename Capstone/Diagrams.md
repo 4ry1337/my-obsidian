@@ -850,3 +850,4 @@ sequenceDiagram
   System-->>Client: Formatted activity data
   Client-->>User: Updates on the Activity Stream
 ```
+
