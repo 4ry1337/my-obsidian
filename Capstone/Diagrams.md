@@ -174,46 +174,46 @@ flowchart TD
 # Models
 ```mermaid
 erDiagram
+action }|--|{ activity_stream: uses
+activity_stream }o--o{ users: stores
 sessions }|--|| users : "Database session management"
 accounts }|--|| users : "saves tokens retrieved from the provider"
 user_snapshot }o--o{ users : uses
 
 users ||--|{ device: "used by"
 users }o--o{ articles : writers
-articles |o--o{ articles : "citation with system"
-articles ||--|{ article_version : uses
-article_version ||--|{ article_block : constructed
-
 users |o--|{ lists : contains
-lists }|--|{ list_article: contains
-list_article }o--o{ articles: contains
-
 users }o--o{ series: has
-publishers }o--o{ series: has
-series }|--|| articles : contains
-
-users }o--o{ follow : subscribe
-users }o--o{ follow : subscribe
-follow }o--o{ series : subscribe
-follow }o--o{ publishers : subscribe
-
 users }o--o{ publisher_user : member
+users }o--o{ follow : follower
+users }o--o{ follow : following
+users }|--|{ tags : uses
+users }o--o{ comment : comment
+
 publisher_user }o--o{ publishers : member
+follow }o--o{ publishers : subscribe
+publishers }o--o{ series: has
 publishers |o--o{ articles : publishes
 publishers }|--|{ tags : uses
-
-activity_stream }o--o{ users: stores
-action }|--|{ activity_stream: uses
-
-device ||--|| article_version: used
-articles }|--|{ tags : uses
-articles }o--o{ article_snapshot: uses 
 publishers }o--o{ publisher_snapshot: uses
 
-users }o--o{ comment : comment
-series }o--o{ comment : comment
+lists }|--|{ list_article: contains
 lists }o--o{ comment : comment
+
+follow }o--o{ series : subscribe
+series }|--|| articles : contains
+series }o--o{ comment : comment
+
+list_article }o--o{ articles: contains
+device ||--|| article_version: used
+
+articles ||--|{ article_version : uses
+articles }o--o{ article_snapshot: uses 
+articles }|--|{ tags : uses
 articles }o--o{ comment : comment
+articles |o--o{ articles : "citation with system"
+
+article_version ||--|{ article_block : constructed
 ```
 ## Main
 ```mermaid
