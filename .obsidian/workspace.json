@@ -14,24 +14,6 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Diagrams.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "1de2fcbadccdafd1",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a1c0e6ba91e4a96b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Capstone/Diagrams.md",
                 "mode": "preview",
                 "source": true
               }
@@ -155,12 +137,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 375.5,
-    "collapsed": true
+    "width": 375.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,10 +154,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "a1c0e6ba91e4a96b",
+  "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
-    "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
     "Capstone/Diagrams.md",
+    "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",

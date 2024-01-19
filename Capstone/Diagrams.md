@@ -172,6 +172,7 @@ flowchart TD
 	promoetheus --> grafana
 ```
 # Models
+## Main
 ```mermaid
 erDiagram
 users {
@@ -195,13 +196,6 @@ users {
 	timestampz created_at
 	timestampz last_modified
 }
-user_snapshot {
-	serial id PK
-	integer user_id FK
-	integer follower_count
-	integer following_count
-	timestampz created_at
-}
 articles {
 	serial article_id PK
 	
@@ -222,19 +216,6 @@ articles {
 	
 	timestampz created_at
 	timestampz last_modified
-}
-article_snapshot {
-	serial id PK
-	integer article_id FK
-	integer like_count
-	integer view_count
-	integer followed_view_count
-	integer unfollowed_view_count
-	integer new_follower_count
-	integer profile_visits
-	integer share_count
-	integer reference_count
-	timestampz created_at
 }
 article_version {
 	bigint article_version_id PK
@@ -283,13 +264,6 @@ publishers {
 	timestampz created_at
 	timestampz last_modified
 }
-publisher_snapshot {
-	serial id PK
-	integer publisher_id FK
-	integer follower_count
-	integer following_count
-	timestampz created_at
-}
 publisher_user {
 	integer user_id PK, FK "NOT NULL"
 	integer publisher_id PK, FK "NOT NULL"
@@ -322,7 +296,6 @@ action {
 	serial id
 	varchar(80) name
 }
-user_snapshot }o--o{ users : user_snapshot_user_id_fkey
 action }|--|{ activity_stream: activity_steam_action_id_fkey
 activity_stream }o--o{ users: activity_steam_actor_id_fkey
 
@@ -336,7 +309,6 @@ list_article }o--o{ articles: list_article_article_id_fkey
 users }o--o{ publisher_user : publisher_user_user_id_fkey
 publisher_user }o--o{ publishers : publisher_user_publisher_id_fkey
 
-publishers }o--o{ publisher_snapshot : publisher_snapshot_publisher_id_fkey
 publishers |o--o{ articles : articles_publisher_id_fkey
 
 users }o--o{ series: series_owner_id_fkey
@@ -345,9 +317,8 @@ series }|--|| articles : article_series_id_fkey
 articles |o--o{ articles : articles_reference_fkey
 article_version ||--|{ article_block : article_version_article_block_id_fkey
 article_version }|--|| articles : article_version_article_id_fkey
-articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 ```
-
+## Auth
 ```mermaid
 erDiagram
 accounts {
@@ -394,7 +365,7 @@ users {
 accounts }|--|| users : "saves tokens retrieved from the provider"
 sessions }|--|| users : "Database session management"
 ```
-
+## Recommendation
 ```mermaid
 erDiagram
 publishers {
@@ -467,7 +438,8 @@ articles }|--|{ tags : article_tag_ids_fkey
 users }|--|{ tags : user_tag_ids_fkey
 publishers }|--|{ tags : publisher_tag_ids_fkey
 ```
-
+## Social Interactions
+### Following
 ```mermaid
 erDiagram
 follow {
@@ -531,7 +503,7 @@ users }o--o{ follow : follow_following_id_type_users_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
 ```
-
+### Comments
 ```mermaid
 erDiagram
 users {
@@ -605,7 +577,7 @@ comment }o--o{ lists : comment_target_id_fkey
 comment }o--o{ series : comment_target_id_fkey
 comment }o--o{ articles : comment_target_id_fkey
 ```
-
+## Analysis
 ```mermaid
 erDiagram
 publishers {
@@ -649,9 +621,60 @@ users {
 	timestampz created_at
 	timestampz last_modified
 }
-
+articles {
+	serial article_id PK
+	
+	integer publisher_id FK
+	integer[] user_ids FK
+	
+	integer series_id FK
+	integer series_order
+	
+	varchar article_name
+	varchar relative_path
+	bigint checksum
+	
+	integer like_count
+	integer comment_count
+	text[] tag_ids FK
+	integer[] reference FK
+	
+	timestampz created_at
+	timestampz last_modified
+}
+user_snapshot {
+	serial id PK
+	integer user_id FK
+	integer follower_count
+	integer following_count
+	timestampz created_at
+}
+article_snapshot {
+	serial id PK
+	integer article_id FK
+	integer like_count
+	integer view_count
+	integer followed_view_count
+	integer unfollowed_view_count
+	integer new_follower_count
+	integer profile_visits
+	integer share_count
+	integer reference_count
+	timestampz created_at
+}
+publisher_snapshot {
+	serial id PK
+	integer publisher_id FK
+	integer follower_count
+	integer following_count
+	timestampz created_at
+}
+users }o--o{ user_snapshot : user_snapshot_user_id_fkey
+publishers }o--o{ publisher_snapshot : publisher_snapshot_publisher_id_fkey
+articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 ```
 
+# Sequence
 ```mermaid
 sequenceDiagram
     participant User
