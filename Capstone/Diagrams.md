@@ -742,3 +742,18 @@ sequenceDiagram
     Service-->>User: shows in UI
     deactivate Service
 ```
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant Client
+  participant System
+
+  User->>Client: Interacts with the platform
+  Client->>System: Records user activity
+
+  Note over Client, System: Process and format activity data
+
+  System-->>Client: Formatted activity data
+  Client-->>User: Updates on the Activity Stream
+```
