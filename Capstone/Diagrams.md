@@ -298,6 +298,7 @@ action {
 }
 action }|--|{ activity_stream: activity_steam_action_id_fkey
 activity_stream }o--o{ users: activity_steam_actor_id_fkey
+activity_stream }o--o{ publishers: activity_steam_actor_id_fkey
 
 users ||--|{ device: device_user_id_fkey
 device ||--|| article_version: article_version_device_id_fkey
@@ -502,31 +503,6 @@ users }o--o{ follow : follow_follower_id_fkey
 users }o--o{ follow : follow_following_id_type_users_fkey
 follow }o--o{ series : follow_following_id_type_series_fkey
 follow }o--o{ publishers : follow_following_id_type_publishers_fkey
-```
-### Comments
-```mermaid
-erDiagram
-users {
-	serial id PK
-	varchar name
-	varchar email
-	timestampz emailVerified
-	approved boolean
-	
-	text image
-	varchar(255) bio
-	
-	text[] urls
-	text[] tag_ids
-	
-	integer follower_count
-	integer following_count
-	
-	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
-	
-	timestampz created_at
-	timestampz last_modified
-}
 comment {
 	integer owner_id PK, FK
 	integer target_id PK, FK
@@ -539,14 +515,6 @@ lists {
 	text label
 	text image
 	boolean visibility
-	timestampz created_at
-	timestampz last_modified
-}
-series {
-	serial series_id PK
-	text owner_id FK
-	text label
-	text image
 	timestampz created_at
 	timestampz last_modified
 }
@@ -573,9 +541,9 @@ articles {
 }
 
 users }o--o{ comment : comment_owner_id_fkey
-comment }o--o{ lists : comment_target_id_fkey
-comment }o--o{ series : comment_target_id_fkey
-comment }o--o{ articles : comment_target_id_fkey
+lists }o--o{ comment: comment_target_id_fkey
+series }o--o{ comment : comment_target_id_fkey
+articles }o--o{ comment: comment_target_id_fkey
 ```
 ## Analysis
 ```mermaid
