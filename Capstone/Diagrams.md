@@ -190,30 +190,33 @@ users }o--o{ follow : following
 users }|--|{ tags : uses
 users }o--o{ comment : comment
 
-publisher_user }o--o{ publishers : member
-follow }o--o{ publishers : subscribe
-publishers }o--o{ series: has
-publishers |o--o{ articles : publishes
-publishers }|--|{ tags : uses
-publishers }o--o{ publisher_snapshot: uses
-
-lists }|--|{ list_article: contains
-lists }o--o{ comment : comment
-
-follow }o--o{ series : subscribe
-series }|--|| articles : contains
-series }o--o{ comment : comment
-
-list_article }o--o{ articles: contains
 device ||--|| article_version: used
 
 articles ||--|{ article_version : uses
 articles }o--o{ article_snapshot: uses 
 articles }|--|{ tags : uses
-articles }o--o{ comment : comment
 articles |o--o{ articles : "citation with system"
 
+lists }|--|{ list_article: contains
+list_article }o--o{ articles: contains
+
+series }|--|| articles : contains
+
+follow }o--o{ publishers : subscribe
+publisher_user }o--o{ publishers : member
+
+follow }o--o{ series : subscribe
+
+comment }o--o{ lists : comment
+comment }o--o{ series : comment
+comment }o--o{ articles : comment
+
 article_version ||--|{ article_block : constructed
+
+publishers }o--o{ series: has
+publishers |o--o{ articles : publishes
+publishers }o--o{ publisher_snapshot: uses
+publishers }|--|{ tags : uses
 ```
 ## Main
 ```mermaid
