@@ -328,23 +328,6 @@ list_article {
 	integer article_id PK, FK
 	timestampz created_at
 }
-activity_stream {
-	serial id PK
-	text summary
-	integer action_id FK
-	integer actor_id FK
-	integer object_id FK
-	integer target_id FK
-	timestampz date_created
-}
-action {
-	serial id
-	varchar(80) name
-}
-action }|--|{ activity_stream: activity_steam_action_id_fkey
-activity_stream }o--o{ users: activity_steam_actor_id_fkey
-activity_stream }o--o{ publishers: activity_steam_actor_id_fkey
-
 users ||--|{ device: device_user_id_fkey
 device ||--|| article_version: article_version_device_id_fkey
 users }o--o{ articles : articles_users_ids_fkey
@@ -411,6 +394,7 @@ users {
 accounts }|--|| users : "saves tokens retrieved from the provider"
 sessions }|--|| users : "Database session management"
 ```
+
 ## Recommendation
 ```mermaid
 erDiagram
@@ -683,7 +667,115 @@ users }o--o{ user_snapshot : user_snapshot_user_id_fkey
 publishers }o--o{ publisher_snapshot : publisher_snapshot_publisher_id_fkey
 articles }o--o{ article_snapshot: article_snapshot_article_id_fkey
 ```
-
+## Activity Stream
+```mermaid
+erDiagram
+activity_stream {
+	serial id PK
+	text summary
+	integer action_id FK
+	integer actor_id FK
+	integer object_id FK
+	integer target_id FK
+	timestampz date_created
+}
+action {
+	serial id
+	varchar(80) name
+}
+users {
+	serial id PK
+	varchar name
+	varchar email
+	timestampz emailVerified
+	approved boolean
+	
+	text image
+	varchar(255) bio
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	enum role "ADMIN, MANAGER, PUBLISHER, USER. default USER"
+	
+	timestampz created_at
+	timestampz last_modified
+}
+series {
+	serial series_id PK
+	text owner_id FK
+	text label
+	text image
+	timestampz created_at
+	timestampz last_modified
+}
+publishers {
+	serial id PK
+	
+	varchar name
+	varchar email
+	approved boolean
+	timestampz emailVerified
+	text image
+	
+	text[] urls
+	text[] tag_ids
+	
+	integer follower_count
+	integer following_count
+	
+	varchar(255) bio
+	
+	timestampz created_at
+	timestampz last_modified
+}
+lists {
+	serial list_id PK
+	integer user_id FK
+	text label
+	text image
+	boolean visibility
+	timestampz created_at
+	timestampz last_modified
+}
+articles {
+	serial article_id PK
+	
+	integer publisher_id FK
+	integer[] user_ids FK
+	
+	integer series_id FK
+	integer series_order
+	
+	varchar article_name
+	varchar relative_path
+	bigint checksum
+	
+	integer like_count
+	integer comment_count
+	text[] tag_ids FK
+	integer[] reference FK
+	
+	timestampz created_at
+	timestampz last_modified
+}
+comment {
+	integer owner_id PK, FK
+	integer target_id PK, FK
+	text content
+	integer like_count
+	enum comment_type "List, Series, Article"
+}
+action }|--|{ activity_stream: activity_steam_action_id_fkey
+users }o--o{ activity_stream : activity_steam_actor_id_fkey
+publishers }o--o{ activity_stream : activity_steam_actor_id_fkey
+activity_stream }o--o{ articles : activity_steam_target_id_fkey
+activity_stream }o--o{ series : activity_steam_target_id_fkey
+activity_stream }o--o{ lists : activity_steam_target_id_fkey
+```
 # Sequence
 ```mermaid
 sequenceDiagram

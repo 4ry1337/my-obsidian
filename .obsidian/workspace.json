@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Diagrams.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -156,6 +156,7 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Untitled.md",
     "Capstone/Diagrams.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
@@ -189,7 +190,6 @@
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Ownership.md",
     "Rust/Rust - Slice Type.md",
-    "Rust/Rust Programming Language.md",
     "Rust/Pasted image 20240111150142.png",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",
