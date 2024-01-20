@@ -11,11 +11,9 @@
             "id": "b89b700feb6b20f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Capstone/Diagrams.md",
-                "mode": "source",
-                "source": true
+                "file": "Capstone/Pasted image 20231217224549.png"
               }
             }
           }
@@ -70,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297,
-    "collapsed": true
+    "width": 297
   },
   "right": {
     "id": "629de03bbb243522",
@@ -87,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Capstone/Pasted image 20231217224549.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Capstone/Pasted image 20231217224549.png"
               }
             }
           },
@@ -156,7 +153,11 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Pasted image 20231217195136.png",
+    "Capstone/Pasted image 20231217194810.png",
+    "Capstone/Capstone Project.md",
     "Capstone/Untitled.md",
+    "Capstone/Research.md",
     "Capstone/Diagrams.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
@@ -174,22 +175,17 @@
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/Structured Query Language.md",
     "Computing/Sub-disciplines/Database Management Systems/DBMS types/Relational Database Management System.md",
-    "Capstone/Capstone Project.md",
     "Rust/Rust - User-defined Types.md",
     "Capstone/general arch.png",
-    "Capstone/Pasted image 20231217195136.png",
-    "Capstone/Pasted image 20231217194810.png",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20240115084751.png",
-    "Capstone/Research.md",
     "Dad.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
     "Computing/Sub-disciplines/Computer Science/Data Types",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - Ownership.md",
-    "Rust/Rust - Slice Type.md",
     "Rust/Pasted image 20240111150142.png",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",

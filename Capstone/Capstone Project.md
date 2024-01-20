@@ -2,25 +2,6 @@
 #capstone
 [[Research]]
 
-## Tasks
-- [x] intro
-
-# Online publishing platform
-Outline:
-- Intro
-- Background
-- Trends
-	- Challenges
-	- Inspiration Sources
-- Tech Assessment
-	- Managing Article Collaboration
-	- Connecting, storing and analysing large amount of data
-- Business Logic
-	- Strategic considerations in E-Publishing
-	- References on E-Publishing business strategies
-- Software Architecture
-- Tech Stack
-
 ## Tech Stack
 - Next.js as frontend
 - Rust as backend
