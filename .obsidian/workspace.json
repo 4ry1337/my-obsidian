@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "ec1dd925e20608e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Capstone/Design.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Capstone/Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Capstone/Design.md"
               }
             }
           },
@@ -140,7 +153,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5
+    "width": 375.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -153,15 +167,15 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "b89b700feb6b20f0",
+  "active": "52ea5cb730e4ef82",
   "lastOpenFiles": [
+    "Capstone/Diagrams.md",
+    "Capstone/Design.md",
+    "Capstone/Capstone Project.md",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20231217195136.png",
     "Capstone/Pasted image 20231217194810.png",
-    "Capstone/Capstone Project.md",
-    "Capstone/Untitled.md",
     "Capstone/Research.md",
-    "Capstone/Diagrams.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Entity-Relational Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
