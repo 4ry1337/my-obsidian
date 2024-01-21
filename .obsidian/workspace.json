@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Capstone/Design.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -167,7 +167,7 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "52ea5cb730e4ef82",
+  "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
     "Capstone/Diagrams.md",
     "Capstone/Design.md",
