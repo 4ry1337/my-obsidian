@@ -11,9 +11,11 @@
             "id": "b89b700feb6b20f0",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Capstone/Pasted image 20231217224549.png"
+                "file": "Capstone/Diagrams.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -84,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Pasted image 20231217224549.png",
+                "file": "Capstone/Diagrams.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Pasted image 20231217224549.png"
+                "file": "Capstone/Diagrams.md"
               }
             }
           },
@@ -153,6 +155,7 @@
   },
   "active": "b89b700feb6b20f0",
   "lastOpenFiles": [
+    "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20231217195136.png",
     "Capstone/Pasted image 20231217194810.png",
     "Capstone/Capstone Project.md",
@@ -178,7 +181,6 @@
     "Rust/Rust - User-defined Types.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
-    "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20240115084751.png",
     "Dad.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
