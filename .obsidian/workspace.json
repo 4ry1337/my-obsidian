@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Control Flow.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "mode": "source",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Control Flow.md",
+                "file": "Rust/Rust - Slice Type.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Control Flow.md"
+                "file": "Rust/Rust - Slice Type.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Rust/Rust - Control Flow.md",
     "Rust/Variables and Mutability.md",
     "Rust/Rust - Functions.md",
     "Rust/Rust - User-defined Types.md",
@@ -200,7 +201,6 @@
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20240115084751.png",
-    "Dad.md",
     "Computing/Sub-disciplines/Computer Science/Data Types",
     "Rust/Pasted image 20240111150142.png",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
