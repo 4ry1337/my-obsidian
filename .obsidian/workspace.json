@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Rust/Rust - Data Types.md",
                 "mode": "source",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Rust/Rust - Data Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Rust/Rust - Data Types.md"
               }
             }
           },
@@ -168,8 +168,10 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
-    "Capstone/Design.md",
+    "Rust/Rust - User-defined Types.md",
+    "_Notes/_Ideas.md",
     "Capstone/Diagrams.md",
+    "Capstone/Design.md",
     "Capstone/Capstone Project.md",
     "Capstone/Pasted image 20231217224549.png",
     "Capstone/Pasted image 20231217195136.png",
@@ -191,7 +193,6 @@
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/Structured Query Language.md",
     "Computing/Sub-disciplines/Database Management Systems/DBMS types/Relational Database Management System.md",
-    "Rust/Rust - User-defined Types.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20240115084751.png",
