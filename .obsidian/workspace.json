@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Ownership.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "mode": "preview",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Ownership.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Ownership.md"
+                "file": "Rust/Rust - User-defined Types.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Rust/Rust - Ownership.md",
     "Rust/Rust - References and Borrowing.md",
     "Rust/Rust - Slice Type.md",
     "Rust/Rust - Control Flow.md",
@@ -197,7 +198,6 @@
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
-    "Computing/Sub-disciplines/Database Management Systems/SQL/Structured Query Language.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20240115084751.png",
