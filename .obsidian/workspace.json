@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Data Types.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "mode": "source",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Data Types.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Data Types.md"
+                "file": "Rust/Rust - User-defined Types.md"
               }
             }
           },
@@ -168,6 +168,9 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Rust/Rust - Functions.md",
+    "Rust/Variables and Mutability.md",
+    "Rust/Rust - Data Types.md",
     "Rust/Rust - User-defined Types.md",
     "_Notes/_Ideas.md",
     "Capstone/Diagrams.md",
@@ -198,10 +201,7 @@
     "Capstone/Pasted image 20240115084751.png",
     "Dad.md",
     "Computing/Sub-disciplines/Computer Science/Data Types/Record.md",
-    "Computing/Sub-disciplines/Computer Science/Data Types/Data Type.md",
     "Computing/Sub-disciplines/Computer Science/Data Types",
-    "Rust/Rust - Data Types.md",
-    "Rust/Rust - Ownership.md",
     "Rust/Pasted image 20240111150142.png",
     "Computing/Computer/Computer Programming/Pasted image 20240111083554.png",
     "Rust/Pasted image 20231226112435.png",
