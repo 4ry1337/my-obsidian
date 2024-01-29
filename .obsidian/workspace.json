@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Rust/Rust - Functions.md",
                 "mode": "source",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md",
+                "file": "Rust/Rust - Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - User-defined Types.md"
+                "file": "Rust/Rust - Functions.md"
               }
             }
           },
@@ -168,8 +168,8 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
-    "Rust/Rust - References and Borrowing.md",
     "Rust/Rust - User-defined Types.md",
+    "Rust/Rust - References and Borrowing.md",
     "Rust/Rust - Functions.md",
     "Rust/Variables and Mutability.md",
     "Rust/Rust - Data Types.md",
