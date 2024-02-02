@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Rust - Control Flow.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "mode": "preview",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust - Control Flow.md",
+                "file": "Rust/Rust - User-defined Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust - Control Flow.md"
+                "file": "Rust/Rust - User-defined Types.md"
               }
             }
           },
@@ -168,13 +168,13 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Rust/Rust - Control Flow.md",
     "Rust/Rust - Functions.md",
     "Rust/Rust - Data Types.md",
     "Rust/Rust - User-defined Types.md",
     "Rust/Rust - Ownership.md",
     "Rust/Rust - References and Borrowing.md",
     "Rust/Rust - Slice Type.md",
-    "Rust/Rust - Control Flow.md",
     "Rust/Variables and Mutability.md",
     "_Notes/_Ideas.md",
     "Capstone/Diagrams.md",
