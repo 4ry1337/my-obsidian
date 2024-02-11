@@ -171,6 +171,21 @@ flowchart TD
 	api --> promoetheus
 	promoetheus --> grafana
 ```
+```mermaid
+flowchart TD
+abc("a, b, c") --- ab("a, b")
+abc("a, b, c") --- ac("a, c")
+abc("a, b, c") --- bc("b, c")
+ab("a, b") --- a("a")
+ab("a, b") --- b("b")
+ac("a, c") --- a("a")
+ac("a, c") --- c("c")
+bc("b, c") --- b("b")
+bc("b, c") --- c("c")
+a("a") --- jsl(Join semi-lattice)
+b("b") --- jsl(Join semi-lattice)
+c("c") --- jsl(Join semi-lattice)
+```
 # Models
 ```mermaid
 erDiagram
@@ -850,4 +865,3 @@ sequenceDiagram
   System-->>Client: Formatted activity data
   Client-->>User: Updates on the Activity Stream
 ```
-
