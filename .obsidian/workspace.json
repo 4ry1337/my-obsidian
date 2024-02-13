@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
-                "mode": "source",
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Operators.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Operators.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md"
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Operators.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DCL.md",
@@ -196,7 +197,6 @@
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Database Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database Models/Data Model.md",
     "Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",
-    "Computing/Sub-disciplines/Database Management Systems/Database types/Codd's 12 rules.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/images/Window Functions.png",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
