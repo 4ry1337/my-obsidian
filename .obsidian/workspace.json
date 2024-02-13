@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
                 "mode": "source",
                 "source": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capstone/Diagrams.md",
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capstone/Diagrams.md"
+                "file": "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md"
               }
             }
           },
@@ -168,6 +168,15 @@
   },
   "active": "ec1dd925e20608e7",
   "lastOpenFiles": [
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DCL.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/DBMS Transactions.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Clauses.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Expressions.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Functions.md",
+    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL Operators.md",
+    "Capstone/Diagrams.md",
     "Rust/Rust - User-defined Types.md",
     "Rust/Rust - Control Flow.md",
     "Rust/Rust - Functions.md",
@@ -177,7 +186,6 @@
     "Rust/Rust - Slice Type.md",
     "Rust/Variables and Mutability.md",
     "_Notes/_Ideas.md",
-    "Capstone/Diagrams.md",
     "Capstone/Design.md",
     "Capstone/Capstone Project.md",
     "Capstone/Pasted image 20231217224549.png",
@@ -190,14 +198,6 @@
     "Computing/Sub-disciplines/Database Management Systems/Database types/Relational Database.md",
     "Computing/Sub-disciplines/Database Management Systems/Database types/Codd's 12 rules.md",
     "Computing/Sub-disciplines/Database Management Systems/SQL/images/Window Functions.png",
-    "Computing/Sub-disciplines/Database Management Systems/Database Scalability.md",
-    "Computing/Sub-disciplines/Database Management Systems/Database Schema.md",
-    "Computing/Sub-disciplines/Database Management Systems/Database Design.md",
-    "Computing/Sub-disciplines/Database Management Systems/Database Management Systems.md",
-    "Computing/Sub-disciplines/Database Management Systems/Database.md",
-    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DDL.md",
-    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DML.md",
-    "Computing/Sub-disciplines/Database Management Systems/SQL/SQL-DQL.md",
     "Capstone/general arch.png",
     "Capstone/Pasted image 20240115085216.png",
     "Capstone/Pasted image 20240115084751.png",
