@@ -13,9 +13,21 @@
 	- nvim
 	- oh my posh
 	- c++
+		- clang
+		- llvm
 	- mouse soft
 	- minibin
 	- openssl
+	- pwsh
+	- pureref
+	- blender
+	- adobe
+	- terminal windows
+	- ts
+	- ds
+	- vs: desktop with c++
+	- pureref
+	- powertoys
 	- 
 
 Battle.net: Q7FVHC
